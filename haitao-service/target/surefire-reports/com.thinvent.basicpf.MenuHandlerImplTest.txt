@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.thinvent.basicpf.MenuHandlerImplTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.535 sec - in com.thinvent.basicpf.MenuHandlerImplTest

@@ -1,0 +1,259 @@
+2018-06-22 11:27:18.272  INFO 3524 --- [main] com.thinvent.zhhd.MainApplication        : Starting MainApplication on DESKTOP-CGI6KFU with PID 3524 (E:\haitao\haitao-base-service\target\classes started by chenkangxiang in E:\haitao\haitao-base-service)
+2018-06-22 11:27:18.284 DEBUG 3524 --- [main] com.thinvent.zhhd.MainApplication        : Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2018-06-22 11:27:18.285  INFO 3524 --- [main] com.thinvent.zhhd.MainApplication        : The following profiles are active: dev
+2018-06-22 11:27:18.411  INFO 3524 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3dddbe65: startup date [Fri Jun 22 11:27:18 CST 2018]; root of context hierarchy
+2018-06-22 11:27:18.819  INFO 3524 --- [background-preinit] o.h.validator.internal.util.Version      : HV000001: Hibernate Validator 5.3.5.Final
+2018-06-22 11:27:22.410  INFO 3524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$a59f614f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-22 11:27:22.518  INFO 3524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d1ed4fcc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-22 11:27:23.442  INFO 3524 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9002 (http)
+2018-06-22 11:27:23.597  INFO 3524 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-06-22 11:27:23.599  INFO 3524 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-06-22 11:27:23.973  INFO 3524 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-22 11:27:23.974  INFO 3524 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5563 ms
+2018-06-22 11:27:24.330  INFO 3524 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-22 11:27:24.345  INFO 3524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-22 11:27:24.346  INFO 3524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-22 11:27:24.346  INFO 3524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-22 11:27:24.347  INFO 3524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-22 11:27:24.347  INFO 3524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2018-06-22 11:27:28.627  INFO 3524 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-22 11:27:28.677  INFO 3524 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-22 11:27:28.893  INFO 3524 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-22 11:27:28.896  INFO 3524 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-22 11:27:28.897  INFO 3524 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-22 11:27:29.071  INFO 3524 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-22 11:27:29.388  INFO 3524 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-22 11:27:30.448  INFO 3524 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-22 11:27:32.079  INFO 3524 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-22 11:27:32.855  INFO 3524 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-06-22 11:27:34.501  INFO 3524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dictionary/querySysDictionaryGroupList],methods=[GET]}" onto public java.util.List<com.thinvent.zhhd.model.SysDictionaryGroup> com.thinvent.zhhd.controller.DictionaryGroupController.querySysDictionaryGroupList()
+2018-06-22 11:27:34.509  INFO 3524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dictionary/queryBySysDictionaryItemId],methods=[GET]}" onto public java.lang.Object com.thinvent.zhhd.controller.DictionaryItemController.queryBySysDictionaryItemId(java.lang.String)
+2018-06-22 11:27:34.514  INFO 3524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dictionary/updateSysDictionaryItem],methods=[POST]}" onto public java.lang.Object com.thinvent.zhhd.controller.DictionaryItemController.updateSysDictionaryItem(com.thinvent.zhhd.common.vo.DictionaryItemVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-22 11:27:34.515  INFO 3524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dictionary/queryAllDictItemsByDictGroupId],methods=[GET]}" onto public java.util.List<com.thinvent.zhhd.common.vo.DictionaryItemVO> com.thinvent.zhhd.controller.DictionaryItemController.queryAllDictItemsByDictGroupId(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-22 11:27:34.515  INFO 3524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dictionary/saveSysDictionaryItem],methods=[POST]}" onto public void com.thinvent.zhhd.controller.DictionaryItemController.saveSysDictionaryItem(com.thinvent.zhhd.common.vo.DictionaryItemVO)
+2018-06-22 11:27:34.516  INFO 3524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dictionary/queryAllEnabledDictItemsByDictGroupId],methods=[GET]}" onto public java.util.List<com.thinvent.zhhd.common.vo.DictionaryItemVO> com.thinvent.zhhd.controller.DictionaryItemController.queryAllEnabledDictItemsByDictGroupId(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-22 11:27:34.518  INFO 3524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dictionary/querySysDictionaryItemListByDictGroupId],methods=[GET]}" onto public org.springframework.data.domain.Page<com.thinvent.zhhd.model.SysDictionaryItem> com.thinvent.zhhd.controller.DictionaryItemController.querySysDictionaryItemListByDictGroupId(int,int,java.lang.String)
+2018-06-22 11:27:34.523  INFO 3524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reportView/getOpr],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.thinvent.zhhd.controller.OprReportController.getReportData(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws com.thinvent.library.exception.ThinventBaseException,org.eclipse.birt.report.engine.api.EngineException
+2018-06-22 11:27:34.524  INFO 3524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reportView/exportOpr],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.String> com.thinvent.zhhd.controller.OprReportController.exportReportData(java.lang.String,java.lang.String,java.lang.String) throws com.thinvent.library.exception.ThinventBaseException,org.eclipse.birt.report.engine.api.EngineException
+2018-06-22 11:27:34.525  INFO 3524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reportView/get],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.String> com.thinvent.zhhd.controller.ReportController.getReportData(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws com.thinvent.library.exception.ThinventBaseException,org.eclipse.birt.report.engine.api.EngineException
+2018-06-22 11:27:34.526  INFO 3524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reportView/export],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.String> com.thinvent.zhhd.controller.ReportController.exportReportData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws com.thinvent.library.exception.ThinventBaseException,org.eclipse.birt.report.engine.api.EngineException
+2018-06-22 11:27:34.527  INFO 3524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2018-06-22 11:27:34.531  INFO 3524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-06-22 11:27:34.532  INFO 3524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-06-22 11:27:34.532  INFO 3524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-06-22 11:27:34.536  INFO 3524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-22 11:27:34.536  INFO 3524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-22 11:27:35.566  INFO 3524 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3dddbe65: startup date [Fri Jun 22 11:27:18 CST 2018]; root of context hierarchy
+2018-06-22 11:27:35.722  INFO 3524 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-22 11:27:35.722  INFO 3524 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-22 11:27:35.782  INFO 3524 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in thinventBaseExceptionHandler
+2018-06-22 11:27:35.865  INFO 3524 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-22 11:27:36.925  INFO 3524 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-22 11:27:36.968  INFO 3524 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-06-22 11:27:36.978  INFO 3524 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-06-22 11:27:37.012  INFO 3524 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2018-06-22 11:27:37.087  INFO 3524 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2018-06-22 11:27:37.103  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.144  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.146  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.148  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.149  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.150  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.152  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.155  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.156  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.162  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.164  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.166  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.170  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.172  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.174  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.181  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method queryAllDictItemsByDictGroupId was dictionary-item-controller
+2018-06-22 11:27:37.229  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: queryAllDictItemsByDictGroupId belongs to groups: [[ResourceGroup{groupName='dictionary-item-controller', position=0, controller=com.thinvent.zhhd.controller.DictionaryItemController}]] 
+2018-06-22 11:27:37.241  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method queryAllEnabledDictItemsByDictGroupId was dictionary-item-controller
+2018-06-22 11:27:37.241  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: queryAllEnabledDictItemsByDictGroupId belongs to groups: [[ResourceGroup{groupName='dictionary-item-controller', position=0, controller=com.thinvent.zhhd.controller.DictionaryItemController}]] 
+2018-06-22 11:27:37.243  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method queryBySysDictionaryItemId was dictionary-item-controller
+2018-06-22 11:27:37.245  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: queryBySysDictionaryItemId belongs to groups: [[ResourceGroup{groupName='dictionary-item-controller', position=0, controller=com.thinvent.zhhd.controller.DictionaryItemController}]] 
+2018-06-22 11:27:37.245  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method querySysDictionaryGroupList was dictionary-group-controller
+2018-06-22 11:27:37.246  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: querySysDictionaryGroupList belongs to groups: [[ResourceGroup{groupName='dictionary-group-controller', position=0, controller=com.thinvent.zhhd.controller.DictionaryGroupController}]] 
+2018-06-22 11:27:37.246  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method querySysDictionaryItemListByDictGroupId was dictionary-item-controller
+2018-06-22 11:27:37.246  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: querySysDictionaryItemListByDictGroupId belongs to groups: [[ResourceGroup{groupName='dictionary-item-controller', position=0, controller=com.thinvent.zhhd.controller.DictionaryItemController}]] 
+2018-06-22 11:27:37.251  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method saveSysDictionaryItem was dictionary-item-controller
+2018-06-22 11:27:37.252  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: saveSysDictionaryItem belongs to groups: [[ResourceGroup{groupName='dictionary-item-controller', position=0, controller=com.thinvent.zhhd.controller.DictionaryItemController}]] 
+2018-06-22 11:27:37.253  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method updateSysDictionaryItem was dictionary-item-controller
+2018-06-22 11:27:37.253  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: updateSysDictionaryItem belongs to groups: [[ResourceGroup{groupName='dictionary-item-controller', position=0, controller=com.thinvent.zhhd.controller.DictionaryItemController}]] 
+2018-06-22 11:27:37.264  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /dictionary/dictionary-group-controller Description: dictionary-group-controller Position: 0
+2018-06-22 11:27:37.266  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /dictionary/dictionary-item-controller Description: dictionary-item-controller Position: 0
+2018-06-22 11:27:37.555  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.zhhd.model.SysDictionaryGroup>(true)
+2018-06-22 11:27:37.555  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.thinvent.zhhd.model.SysDictionaryGroup>(true)
+2018-06-22 11:27:37.569  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.zhhd.model.SysDictionaryGroup>(true)
+2018-06-22 11:27:37.570  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.thinvent.zhhd.model.SysDictionaryGroup>(true)
+2018-06-22 11:27:37.584  INFO 3524 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.zhhd.model.SysDictionaryGroup(true)
+2018-06-22 11:27:37.584  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.zhhd.model.SysDictionaryGroup(true)
+2018-06-22 11:27:37.656  INFO 3524 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.thinvent.zhhd.model.SysDictionaryGroup>(true)
+2018-06-22 11:27:37.657  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.thinvent.zhhd.model.SysDictionaryGroup>(true)
+2018-06-22 11:27:37.663  INFO 3524 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.zhhd.model.SysDictionaryGroup(true)
+2018-06-22 11:27:37.664  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.zhhd.model.SysDictionaryGroup(true)
+2018-06-22 11:27:37.685  INFO 3524 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /dictionary/querySysDictionaryGroupList.com.thinvent.zhhd.controller.DictionaryGroupController.querySysDictionaryGroupList.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:37.686  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /dictionary/querySysDictionaryGroupList.com.thinvent.zhhd.controller.DictionaryGroupController.querySysDictionaryGroupList.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:37.705  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method querySysDictionaryGroupList was dictionary-group-controller
+2018-06-22 11:27:37.744  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method querySysDictionaryGroupList was dictionary-group-controller
+2018-06-22 11:27:37.777  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.zhhd.common.vo.DictionaryItemVO>(true)
+2018-06-22 11:27:37.779  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.thinvent.zhhd.common.vo.DictionaryItemVO>(true)
+2018-06-22 11:27:37.781  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.zhhd.common.vo.DictionaryItemVO>(true)
+2018-06-22 11:27:37.784  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.thinvent.zhhd.common.vo.DictionaryItemVO>(true)
+2018-06-22 11:27:37.785  INFO 3524 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.zhhd.common.vo.DictionaryItemVO(true)
+2018-06-22 11:27:37.785  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.zhhd.common.vo.DictionaryItemVO(true)
+2018-06-22 11:27:37.800  INFO 3524 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.thinvent.zhhd.common.vo.DictionaryItemVO>(true)
+2018-06-22 11:27:37.800  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.thinvent.zhhd.common.vo.DictionaryItemVO>(true)
+2018-06-22 11:27:37.802  INFO 3524 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.zhhd.common.vo.DictionaryItemVO(true)
+2018-06-22 11:27:37.803  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.zhhd.common.vo.DictionaryItemVO(true)
+2018-06-22 11:27:37.805  INFO 3524 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /dictionary/queryAllDictItemsByDictGroupId.com.thinvent.zhhd.controller.DictionaryItemController.queryAllDictItemsByDictGroupId.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:37.805  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /dictionary/queryAllDictItemsByDictGroupId.com.thinvent.zhhd.controller.DictionaryItemController.queryAllDictItemsByDictGroupId.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:37.821  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method queryAllDictItemsByDictGroupId was dictionary-item-controller
+2018-06-22 11:27:37.832  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method queryAllDictItemsByDictGroupId was dictionary-item-controller
+2018-06-22 11:27:37.836  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.zhhd.common.vo.DictionaryItemVO>(true)
+2018-06-22 11:27:37.836  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.thinvent.zhhd.common.vo.DictionaryItemVO>(true)
+2018-06-22 11:27:37.836  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.zhhd.common.vo.DictionaryItemVO>(true)
+2018-06-22 11:27:37.837  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.thinvent.zhhd.common.vo.DictionaryItemVO>(true)
+2018-06-22 11:27:37.837  INFO 3524 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.zhhd.common.vo.DictionaryItemVO(true)
+2018-06-22 11:27:37.837  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.zhhd.common.vo.DictionaryItemVO(true)
+2018-06-22 11:27:37.838  INFO 3524 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /dictionary/queryAllEnabledDictItemsByDictGroupId.com.thinvent.zhhd.controller.DictionaryItemController.queryAllEnabledDictItemsByDictGroupId.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:37.839  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /dictionary/queryAllEnabledDictItemsByDictGroupId.com.thinvent.zhhd.controller.DictionaryItemController.queryAllEnabledDictItemsByDictGroupId.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:37.846  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method queryAllEnabledDictItemsByDictGroupId was dictionary-item-controller
+2018-06-22 11:27:37.849  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method queryAllEnabledDictItemsByDictGroupId was dictionary-item-controller
+2018-06-22 11:27:37.851  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-22 11:27:37.851  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2018-06-22 11:27:37.852  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-22 11:27:37.852  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2018-06-22 11:27:37.854  INFO 3524 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /dictionary/queryBySysDictionaryItemId.com.thinvent.zhhd.controller.DictionaryItemController.queryBySysDictionaryItemId.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:37.856  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /dictionary/queryBySysDictionaryItemId.com.thinvent.zhhd.controller.DictionaryItemController.queryBySysDictionaryItemId.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:37.858  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method queryBySysDictionaryItemId was dictionary-item-controller
+2018-06-22 11:27:37.861  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method queryBySysDictionaryItemId was dictionary-item-controller
+2018-06-22 11:27:37.864  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: org.springframework.data.domain.Page<com.thinvent.zhhd.model.SysDictionaryItem>(true)
+2018-06-22 11:27:37.865  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key org.springframework.data.domain.Page<com.thinvent.zhhd.model.SysDictionaryItem>(true)
+2018-06-22 11:27:37.865  INFO 3524 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.data.domain.Page<com.thinvent.zhhd.model.SysDictionaryItem>(true)
+2018-06-22 11:27:37.865  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.data.domain.Page<com.thinvent.zhhd.model.SysDictionaryItem>(true)
+2018-06-22 11:27:37.912  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: org.springframework.data.domain.Page<com.thinvent.zhhd.model.SysDictionaryItem>(true)
+2018-06-22 11:27:37.912  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key org.springframework.data.domain.Page<com.thinvent.zhhd.model.SysDictionaryItem>(true)
+2018-06-22 11:27:37.912  INFO 3524 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.zhhd.model.SysDictionaryItem(true)
+2018-06-22 11:27:37.913  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.zhhd.model.SysDictionaryItem(true)
+2018-06-22 11:27:37.919  INFO 3524 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.data.domain.Page<com.thinvent.zhhd.model.SysDictionaryItem>(true)
+2018-06-22 11:27:37.919  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.data.domain.Page<com.thinvent.zhhd.model.SysDictionaryItem>(true)
+2018-06-22 11:27:37.920  INFO 3524 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.zhhd.model.SysDictionaryItem(true)
+2018-06-22 11:27:37.920  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.zhhd.model.SysDictionaryItem(true)
+2018-06-22 11:27:37.922  INFO 3524 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.data.domain.Sort(true)
+2018-06-22 11:27:37.923  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.data.domain.Sort(true)
+2018-06-22 11:27:37.926  INFO 3524 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.zhhd.model.SysDictionaryItem(true)
+2018-06-22 11:27:37.926  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.zhhd.model.SysDictionaryItem(true)
+2018-06-22 11:27:37.928  INFO 3524 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.data.domain.Sort(true)
+2018-06-22 11:27:37.928  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.data.domain.Sort(true)
+2018-06-22 11:27:37.929  INFO 3524 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /dictionary/querySysDictionaryItemListByDictGroupId.com.thinvent.zhhd.controller.DictionaryItemController.querySysDictionaryItemListByDictGroupId.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:37.929  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /dictionary/querySysDictionaryItemListByDictGroupId.com.thinvent.zhhd.controller.DictionaryItemController.querySysDictionaryItemListByDictGroupId.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:37.943  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method querySysDictionaryItemListByDictGroupId was dictionary-item-controller
+2018-06-22 11:27:37.945  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method querySysDictionaryItemListByDictGroupId was dictionary-item-controller
+2018-06-22 11:27:37.948  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-22 11:27:37.948  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-22 11:27:37.949  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-22 11:27:37.949  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-22 11:27:37.949  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.zhhd.common.vo.DictionaryItemVO(false)
+2018-06-22 11:27:37.949  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.zhhd.common.vo.DictionaryItemVO(false)
+2018-06-22 11:27:37.949  INFO 3524 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.zhhd.common.vo.DictionaryItemVO(false)
+2018-06-22 11:27:37.950  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.zhhd.common.vo.DictionaryItemVO(false)
+2018-06-22 11:27:37.952  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.zhhd.common.vo.DictionaryItemVO(false)
+2018-06-22 11:27:37.952  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.zhhd.common.vo.DictionaryItemVO(false)
+2018-06-22 11:27:37.953  INFO 3524 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.zhhd.common.vo.DictionaryItemVO(false)
+2018-06-22 11:27:37.954  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.zhhd.common.vo.DictionaryItemVO(false)
+2018-06-22 11:27:37.955  INFO 3524 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /dictionary/saveSysDictionaryItem.com.thinvent.zhhd.controller.DictionaryItemController.saveSysDictionaryItem.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:37.955  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /dictionary/saveSysDictionaryItem.com.thinvent.zhhd.controller.DictionaryItemController.saveSysDictionaryItem.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:37.958  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method saveSysDictionaryItem was dictionary-item-controller
+2018-06-22 11:27:37.960  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method saveSysDictionaryItem was dictionary-item-controller
+2018-06-22 11:27:37.962  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.zhhd.common.vo.DictionaryItemVO(false)
+2018-06-22 11:27:37.963  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.zhhd.common.vo.DictionaryItemVO(false)
+2018-06-22 11:27:37.964  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.zhhd.common.vo.DictionaryItemVO(false)
+2018-06-22 11:27:37.964  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.zhhd.common.vo.DictionaryItemVO(false)
+2018-06-22 11:27:37.964  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-22 11:27:37.964  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2018-06-22 11:27:37.965  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-22 11:27:37.965  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2018-06-22 11:27:37.965  INFO 3524 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /dictionary/updateSysDictionaryItem.com.thinvent.zhhd.controller.DictionaryItemController.updateSysDictionaryItem.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:37.965  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /dictionary/updateSysDictionaryItem.com.thinvent.zhhd.controller.DictionaryItemController.updateSysDictionaryItem.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:37.967  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method updateSysDictionaryItem was dictionary-item-controller
+2018-06-22 11:27:37.969  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method updateSysDictionaryItem was dictionary-item-controller
+2018-06-22 11:27:37.976  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.977  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.979  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.980  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.981  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.982  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.983  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:37.984  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method exportReportData was opr-report-controller
+2018-06-22 11:27:37.984  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: exportReportData belongs to groups: [[ResourceGroup{groupName='opr-report-controller', position=0, controller=com.thinvent.zhhd.controller.OprReportController}]] 
+2018-06-22 11:27:37.984  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method exportReportData was report-controller
+2018-06-22 11:27:37.984  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: exportReportData belongs to groups: [[ResourceGroup{groupName='report-controller', position=0, controller=com.thinvent.zhhd.controller.ReportController}]] 
+2018-06-22 11:27:37.985  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getReportData was opr-report-controller
+2018-06-22 11:27:37.985  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getReportData belongs to groups: [[ResourceGroup{groupName='opr-report-controller', position=0, controller=com.thinvent.zhhd.controller.OprReportController}]] 
+2018-06-22 11:27:37.986  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getReportData was report-controller
+2018-06-22 11:27:37.986  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getReportData belongs to groups: [[ResourceGroup{groupName='report-controller', position=0, controller=com.thinvent.zhhd.controller.ReportController}]] 
+2018-06-22 11:27:37.987  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /reportView/report-controller Description: report-controller Position: 0
+2018-06-22 11:27:37.987  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /reportView/opr-report-controller Description: opr-report-controller Position: 0
+2018-06-22 11:27:37.989  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(true)
+2018-06-22 11:27:37.989  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(true)
+2018-06-22 11:27:37.989  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(true)
+2018-06-22 11:27:37.989  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(true)
+2018-06-22 11:27:37.990  INFO 3524 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.Map<java.lang.String,java.lang.String>(true)
+2018-06-22 11:27:37.990  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.Map<java.lang.String,java.lang.String>(true)
+2018-06-22 11:27:37.992  INFO 3524 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /reportView/exportOpr.com.thinvent.zhhd.controller.OprReportController.exportReportData.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:37.992  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /reportView/exportOpr.com.thinvent.zhhd.controller.OprReportController.exportReportData.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:37.998  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method exportReportData was opr-report-controller
+2018-06-22 11:27:38.000  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method exportReportData was opr-report-controller
+2018-06-22 11:27:38.002  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-22 11:27:38.002  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2018-06-22 11:27:38.003  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-22 11:27:38.003  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2018-06-22 11:27:38.003  INFO 3524 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /reportView/getOpr.com.thinvent.zhhd.controller.OprReportController.getReportData.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:38.004  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /reportView/getOpr.com.thinvent.zhhd.controller.OprReportController.getReportData.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:38.009  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getReportData was opr-report-controller
+2018-06-22 11:27:38.010  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getReportData was opr-report-controller
+2018-06-22 11:27:38.012  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(true)
+2018-06-22 11:27:38.013  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(true)
+2018-06-22 11:27:38.013  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(true)
+2018-06-22 11:27:38.013  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(true)
+2018-06-22 11:27:38.013  INFO 3524 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /reportView/export.com.thinvent.zhhd.controller.ReportController.exportReportData.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:38.013  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /reportView/export.com.thinvent.zhhd.controller.ReportController.exportReportData.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:38.020  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method exportReportData was report-controller
+2018-06-22 11:27:38.021  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method exportReportData was report-controller
+2018-06-22 11:27:38.022  INFO 3524 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: exportReportDataUsingGET_1
+2018-06-22 11:27:38.024  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(true)
+2018-06-22 11:27:38.024  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.String>(true)
+2018-06-22 11:27:38.024  INFO 3524 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.Map<java.lang.String,java.lang.String>(true)
+2018-06-22 11:27:38.024  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.String>(true)
+2018-06-22 11:27:38.024  INFO 3524 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /reportView/get.com.thinvent.zhhd.controller.ReportController.getReportData.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:38.025  INFO 3524 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /reportView/get.com.thinvent.zhhd.controller.ReportController.getReportData.CodeGenGenericTypeNamingStrategy
+2018-06-22 11:27:38.029  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getReportData was report-controller
+2018-06-22 11:27:38.030  INFO 3524 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getReportData was report-controller
+2018-06-22 11:27:38.031  INFO 3524 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getReportDataUsingGET_1
+2018-06-22 11:27:38.032  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:38.032  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:38.034  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:38.035  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:38.037  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:38.039  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:38.041  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:38.043  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:38.047  INFO 3524 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-22 11:27:38.088  INFO 3524 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-9002"]
+2018-06-22 11:27:38.145  INFO 3524 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-9002"]
+2018-06-22 11:27:38.233  INFO 3524 --- [main] o.a.tomcat.util.net.NioSelectorPool      : Using a shared selector for servlet write/read
+2018-06-22 11:27:38.292  INFO 3524 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9002 (http)
+2018-06-22 11:27:38.331  INFO 3524 --- [main] com.thinvent.zhhd.MainApplication        : Started MainApplication in 20.905 seconds (JVM running for 26.873)
+2018-06-22 11:27:47.199  INFO 3524 --- [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-06-22 11:27:47.199  INFO 3524 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-06-22 11:27:47.199  INFO 3524 --- [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-06-22 11:27:47.200  INFO 3524 --- [RMI TCP Connection(5)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3dddbe65: startup date [Fri Jun 22 11:27:18 CST 2018]; root of context hierarchy
+2018-06-22 11:27:47.202  INFO 3524 --- [RMI TCP Connection(5)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2018-06-22 11:27:47.202  INFO 3524 --- [RMI TCP Connection(5)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2018-06-22 11:27:47.204  INFO 3524 --- [RMI TCP Connection(5)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-06-22 11:27:47.207  INFO 3524 --- [RMI TCP Connection(5)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'

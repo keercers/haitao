@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CompanyHandlerImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">zhhd-service</a> &gt; <a href="index.source.html" class="el_package">com.thinvent.basicpf.handler.impl</a> &gt; <span class="el_source">CompanyHandlerImpl.java</span></div><h1>CompanyHandlerImpl.java</h1><pre class="source lang-java linenums">package com.thinvent.basicpf.handler.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.commons.lang.StringUtils;
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.thinvent.basicpf.dao.ICompanyDao;
+import com.thinvent.basicpf.dao.IDepartmentDao;
+import com.thinvent.basicpf.handler.ICompanyHandler;
+import com.thinvent.basicpf.model.Company;
+import com.thinvent.basicpf.util.CompanyVerifyUtil;
+import com.thinvent.library.exception.ThinventBaseException;
+import com.thinvent.library.util.DataVerifyUtil;
+import com.thinvent.library.util.UUIDUtil;
+import com.thinvent.library.vo.CompanyVO;
+
+@Service
+@Transactional(isolation = Isolation.READ_COMMITTED)
+<span class="nc" id="L27">public class CompanyHandlerImpl implements ICompanyHandler{</span>
+
+	@Autowired
+	private ICompanyDao companyDao;
+	@Autowired
+	private IDepartmentDao departmentDao;
+	
+	@Override
+	public Page&lt;Company&gt; queryByCondition(String comName, String comAddr, PageRequest page) {
+<span class="nc" id="L36">		return companyDao.queryByComNameLikeAndComAddrLikeAndEnableOrderById(&quot;%&quot;+comName+&quot;%&quot;, &quot;%&quot;+comAddr+&quot;%&quot;, 1, page);</span>
+	}
+	@Override
+	public String addCompany(CompanyVO companyVO) throws ThinventBaseException {
+<span class="nc" id="L40">		Company company = new Company();</span>
+<span class="nc" id="L41">		BeanUtils.copyProperties(companyVO, company);</span>
+<span class="nc" id="L42">		Company existCompany = companyDao.findOneByComNameAndEnable(company.getComName(),1);</span>
+<span class="nc bnc" id="L43" title="All 6 branches missed.">		if(companyVO.getComId()==null||&quot;&quot;.equals(companyVO.getComId())||companyVO.getComId().trim().length()&lt;=0){</span>
+<span class="nc" id="L44">			company.setComId(UUIDUtil.getUuid());</span>
+<span class="nc" id="L45">			CompanyVerifyUtil.verifyAddExistComName(existCompany);</span>
+<span class="nc" id="L46">		} else {</span>
+<span class="nc" id="L47">			Company companySource = findComByComId(companyVO.getComId());</span>
+<span class="nc" id="L48">			company.setCreateUser(companySource.getCreateUser());</span>
+<span class="nc" id="L49">			company.setCreateTime(companySource.getCreateTime());</span>
+<span class="nc" id="L50">			CompanyVerifyUtil.verifyUpdateExistComName(existCompany,companySource);</span>
+		}
+<span class="nc" id="L52">		List&lt;Company&gt; comList = getAllParCom(company);</span>
+<span class="nc" id="L53">		Boolean flag = false;</span>
+<span class="nc bnc" id="L54" title="All 2 branches missed.">		for (Company com: comList) {</span>
+<span class="nc bnc" id="L55" title="All 2 branches missed.">			if (com.getComId().equals(company.getComParentId())) {</span>
+<span class="nc" id="L56">				flag = true;</span>
+			}
+		}
+<span class="nc" id="L59">		CompanyVerifyUtil.verifySaveCompany(flag);</span>
+<span class="nc" id="L60">		companyDao.save(company);</span>
+<span class="nc" id="L61">		return &quot;200&quot;;</span>
+	}
+	public List&lt;Company&gt; getAllParCom(Company company) throws ThinventBaseException  {
+<span class="nc" id="L64">		List&lt;Company&gt; companyList = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L65">		return getParComList(companyList,company);</span>
+	}
+	public List&lt;Company&gt; getParComList(List&lt;Company&gt; comList, Company company) throws ThinventBaseException {
+<span class="nc bnc" id="L68" title="All 2 branches missed.">		if (company != null) {</span>
+<span class="nc" id="L69">			comList.add(company);</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">			if (!&quot;&quot;.equals(company.getComId())) {</span>
+<span class="nc" id="L71">				Company com = companyDao.findOneByComParentIdAndEnable(company.getComId(),1);</span>
+<span class="nc" id="L72">				getParComList(comList,com);</span>
+			}
+		}
+<span class="nc" id="L75">		return comList;</span>
+	}
+	@Override
+	public String deleteCompany(String comId) throws ThinventBaseException {
+<span class="nc" id="L79">		Boolean existsDept = this.departmentDao.existsByComIdAndEnable(comId);</span>
+<span class="nc" id="L80">		CompanyVerifyUtil.verifyDeleteComResult(existsDept);</span>
+<span class="nc" id="L81">		Company childCompany = companyDao.findOneByComParentIdAndEnable(comId,1);</span>
+<span class="nc" id="L82">		CompanyVerifyUtil.verifyDelExistComChild(childCompany);</span>
+<span class="nc" id="L83">		Company company = companyDao.findOneByComIdAndEnable(comId, 1);</span>
+<span class="nc" id="L84">		company.setEnable(0);</span>
+<span class="nc" id="L85">		companyDao.save(company);</span>
+<span class="nc" id="L86">		return &quot;200&quot;;</span>
+	}
+
+	@Override
+	public Company findComByComId(String comId) throws ThinventBaseException {
+<span class="nc" id="L91">		Company companyResult = companyDao.findOneByComIdAndEnable(comId, 1);</span>
+<span class="nc" id="L92">		CompanyVerifyUtil.verifyObject(companyResult);</span>
+<span class="nc" id="L93">		return companyResult;</span>
+	}
+
+	/**
+	 * 加载所有的单位
+	 */
+	@Override
+	public List&lt;CompanyVO&gt; listAllCompany() throws ThinventBaseException {
+<span class="nc" id="L101">		List&lt;Company&gt; companies = companyDao.findAllByEnable(1);</span>
+<span class="nc" id="L102">		List&lt;CompanyVO&gt; companyList = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L103" title="All 2 branches missed.">		for(Company company : companies) {</span>
+<span class="nc" id="L104">			CompanyVO companyVO = new CompanyVO();</span>
+<span class="nc" id="L105">			BeanUtils.copyProperties(company, companyVO);</span>
+<span class="nc" id="L106">			companyList.add(companyVO);</span>
+		}
+<span class="nc" id="L108">		return companyList;</span>
+	}
+	@Override
+	public List&lt;CompanyVO&gt; listAllCompanyByEnable(String enable) {
+		List&lt;Company&gt; companies;
+
+<span class="nc" id="L114">		String val = enable;</span>
+<span class="nc bnc" id="L115" title="All 2 branches missed.">		if (StringUtils.isBlank(val)) {</span>
+<span class="nc" id="L116">			companies = companyDao.findAll();</span>
+<span class="nc" id="L117">		} else {</span>
+<span class="nc" id="L118">			companies = companyDao.findAllByEnable(Integer.parseInt(enable));</span>
+		}
+		
+<span class="nc" id="L121">		List&lt;CompanyVO&gt; companyList = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L122" title="All 2 branches missed.">		for(Company company : companies) {</span>
+<span class="nc" id="L123">			CompanyVO companyVO = new CompanyVO();</span>
+<span class="nc" id="L124">			BeanUtils.copyProperties(company, companyVO);</span>
+<span class="nc" id="L125">			companyList.add(companyVO);</span>
+		}
+<span class="nc" id="L127">		return companyList;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>

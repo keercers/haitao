@@ -1,0 +1,949 @@
+2018-06-06 10:36:54.794  INFO 2292 --- [main] com.thinvent.basicpf.MainApplication     : Starting MainApplication on DESKTOP-CGI6KFU with PID 2292 (E:\zhhd\zhhd-service\target\classes started by chenkangxiang in E:\zhhd\zhhd-service)
+2018-06-06 10:36:54.882 DEBUG 2292 --- [main] com.thinvent.basicpf.MainApplication     : Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2018-06-06 10:36:54.883  INFO 2292 --- [main] com.thinvent.basicpf.MainApplication     : The following profiles are active: dev
+2018-06-06 10:36:55.135  INFO 2292 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4409e975: startup date [Wed Jun 06 10:36:55 CST 2018]; root of context hierarchy
+2018-06-06 10:36:56.649  INFO 2292 --- [background-preinit] o.h.validator.internal.util.Version      : HV000001: Hibernate Validator 5.3.5.Final
+2018-06-06 10:37:13.851  INFO 2292 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$8e8d3b8e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-06 10:37:14.351  INFO 2292 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$badb2a0b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-06 10:37:18.652  INFO 2292 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9001 (http)
+2018-06-06 10:37:18.686  INFO 2292 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-06-06 10:37:18.688  INFO 2292 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-06-06 10:37:19.944  INFO 2292 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-06 10:37:19.944  INFO 2292 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 24810 ms
+2018-06-06 10:37:20.593  INFO 2292 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-06 10:37:20.604  INFO 2292 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-06 10:37:20.605  INFO 2292 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-06 10:37:20.605  INFO 2292 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-06 10:37:20.605  INFO 2292 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-06 10:37:20.606  INFO 2292 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2018-06-06 10:37:23.938  INFO 2292 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-06 10:37:24.122  INFO 2292 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-06 10:37:25.418  INFO 2292 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-06 10:37:25.423  INFO 2292 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-06 10:37:25.427  INFO 2292 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-06 10:37:25.831  INFO 2292 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-06 10:37:27.578  INFO 2292 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+2018-06-06 10:37:28.596  WARN 2292 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2018-06-06 10:37:28.603  WARN 2292 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2018-06-06 10:37:28.604  WARN 2292 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2018-06-06 10:37:28.605  WARN 2292 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2018-06-06 10:37:28.605  WARN 2292 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2018-06-06 10:37:28.607  WARN 2292 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2018-06-06 10:37:28.609  WARN 2292 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2018-06-06 10:37:28.610  WARN 2292 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2018-06-06 10:37:28.706  WARN 2292 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2018-06-06 10:37:28.707  WARN 2292 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2018-06-06 10:37:28.714  WARN 2292 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2018-06-06 10:37:28.715  WARN 2292 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2018-06-06 10:37:30.616  INFO 2292 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-06-06 10:37:33.235  INFO 2292 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 10:37:38.539  INFO 2292 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-06-06 10:37:47.237  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buttomRegister/buttomRegisterUpdate],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.String> com.thinvent.basicpf.controller.ButtomRegisterController.buttomRegisterUpdate(com.thinvent.library.vo.MoudleVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.315  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buttomRegister/buttomRegisterAdd],methods=[POST]}" onto public java.lang.String com.thinvent.basicpf.controller.ButtomRegisterController.buttomRegisterAdd(com.thinvent.library.vo.MoudleVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.316  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buttomRegister/buttomRegisterDel],methods=[GET]}" onto public void com.thinvent.basicpf.controller.ButtomRegisterController.buttomRegisterDel(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.318  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buttomRegister/buttomRegisterList],methods=[GET]}" onto public java.lang.Object com.thinvent.basicpf.controller.ButtomRegisterController.buttomRegisterList(java.lang.String,java.lang.String,int,int)
+2018-06-06 10:37:47.318  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buttomRegister/buttomRegisterOne],methods=[GET]}" onto public com.thinvent.basicpf.model.Moudle com.thinvent.basicpf.controller.ButtomRegisterController.buttomRegisterOne(java.lang.String)
+2018-06-06 10:37:47.337  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/company/listAllCompanyByEnable],methods=[GET]}" onto public java.util.List<com.thinvent.library.vo.CompanyVO> com.thinvent.basicpf.controller.CompanyController.listAllCompanyByEnable(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.338  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/company/saveCompany],methods=[POST]}" onto public java.lang.String com.thinvent.basicpf.controller.CompanyController.saveCompany(com.thinvent.library.vo.CompanyVO,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.339  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/company/queryByComId],methods=[GET]}" onto public java.lang.Object com.thinvent.basicpf.controller.CompanyController.queryByComId(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.339  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/company/queryCompanyList],methods=[GET]}" onto public org.springframework.data.domain.Page<com.thinvent.basicpf.model.Company> com.thinvent.basicpf.controller.CompanyController.queryCompanyList(java.lang.String,java.lang.String,int,int) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.340  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/company/listAllCompany],methods=[GET]}" onto public java.util.List<com.thinvent.library.vo.CompanyVO> com.thinvent.basicpf.controller.CompanyController.listAllCompany() throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.340  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/company/deleteCompany],methods=[GET]}" onto public java.lang.String com.thinvent.basicpf.controller.CompanyController.deleteCompany(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.360  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/department/addDepartment],methods=[POST]}" onto public void com.thinvent.basicpf.controller.DepartmentController.add(com.thinvent.library.vo.DepartmentVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.425  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/department/getDepartmentById],methods=[GET]}" onto public com.thinvent.basicpf.model.Department com.thinvent.basicpf.controller.DepartmentController.get(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.426  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/department/updateDepartment],methods=[POST]}" onto public void com.thinvent.basicpf.controller.DepartmentController.update(com.thinvent.library.vo.DepartmentVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.427  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/department/delDepartment],methods=[GET]}" onto public void com.thinvent.basicpf.controller.DepartmentController.delete(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.427  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/department/getDeptByName],methods=[GET]}" onto public com.thinvent.basicpf.model.Department com.thinvent.basicpf.controller.DepartmentController.getByName(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.429  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/department/getDepartmentAllData],methods=[GET]}" onto public java.lang.String com.thinvent.basicpf.controller.DepartmentController.getDepartmentAllData() throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.430  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/department/getAllDepartmentsById],methods=[GET]}" onto public java.util.List<com.thinvent.basicpf.model.Department> com.thinvent.basicpf.controller.DepartmentController.getAllDepartmentsById(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.430  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/department/getDepartmentByName],methods=[GET]}" onto public java.util.List<com.thinvent.library.vo.DepartmentVO> com.thinvent.basicpf.controller.DepartmentController.getDepartmentByName(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.430  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/department/getTreeDepartmentsById],methods=[GET]}" onto public java.util.List<java.util.Map> com.thinvent.basicpf.controller.DepartmentController.getTreeDepartmentsById(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.431  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/department/getTreeDepartmentsByUserId],methods=[GET]}" onto public java.util.List<java.util.Map> com.thinvent.basicpf.controller.DepartmentController.getTreeDepartmentsByUserId(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.433  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log/listLogByParams],methods=[GET]}" onto public java.lang.Object com.thinvent.basicpf.controller.LogController.listLogByConditions(int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws com.thinvent.library.exception.ThinventBaseException,java.text.ParseException
+2018-06-06 10:37:47.433  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log/saveLog],methods=[POST]}" onto public void com.thinvent.basicpf.controller.LogController.saveLog(com.thinvent.library.vo.LogVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.436  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/menu/menuAdd],methods=[POST]}" onto public java.lang.String com.thinvent.basicpf.controller.MenuController.menuAdd(com.thinvent.library.vo.MoudleVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.436  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/menu/menuUpdate],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.String> com.thinvent.basicpf.controller.MenuController.menuUpdate(com.thinvent.library.vo.MoudleVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.479  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/menu/menuAll],methods=[GET]}" onto public java.lang.Object com.thinvent.basicpf.controller.MenuController.menuAll()
+2018-06-06 10:37:47.480  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/menu/menuList],methods=[GET]}" onto public java.lang.Object com.thinvent.basicpf.controller.MenuController.menuList(java.lang.String,int,int) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.480  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/menu/menuDel],methods=[GET]}" onto public void com.thinvent.basicpf.controller.MenuController.menuDel(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.480  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/menu/menuOne],methods=[GET]}" onto public com.thinvent.basicpf.model.Moudle com.thinvent.basicpf.controller.MenuController.menuOne(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.482  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/monitorPointVideo/queryMonitorPointVideoByMonitorPointDataId],methods=[GET]}" onto public java.util.List<com.thinvent.library.vo.MonitorPointVideoVO> com.thinvent.basicpf.controller.MonitorPointVideoController.queryMonitorPointVideoByMonitorPointDataId(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.483  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/monitorPointVideo/updateMonitorPointVideo],methods=[POST]}" onto public void com.thinvent.basicpf.controller.MonitorPointVideoController.updateMonitorPointVideo(com.thinvent.library.vo.MonitorPointVideoVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.483  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/monitorPointVideo/saveMonitorPointVideo],methods=[POST]}" onto public void com.thinvent.basicpf.controller.MonitorPointVideoController.saveMonitorPointVideo(com.thinvent.library.vo.MonitorPointVideoVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.485  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/moudle/getMoudleTree],methods=[GET]}" onto public java.util.List<java.util.Map> com.thinvent.basicpf.controller.MoudleController.getMoudleTree(java.lang.String,java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.486  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/moudle/getMoudleByLevel],methods=[GET]}" onto public java.lang.Object com.thinvent.basicpf.controller.MoudleController.getByLevel(java.lang.String,java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.486  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/moudle/getForbidList],methods=[GET]}" onto public java.lang.String com.thinvent.basicpf.controller.MoudleController.getForbidList(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.487  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/moudle/getMoudleTreeBySign],methods=[GET]}" onto public java.lang.Object com.thinvent.basicpf.controller.MoudleController.getTreeBySign(java.lang.String,java.lang.String)
+2018-06-06 10:37:47.487  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/moudle/getAll],methods=[GET]}" onto public java.lang.Object com.thinvent.basicpf.controller.MoudleController.getAll()
+2018-06-06 10:37:47.491  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/position/addPosition],methods=[POST]}" onto public void com.thinvent.basicpf.controller.PositionController.add(com.thinvent.library.vo.PositionVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.495  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/position/getByPosId],methods=[GET]}" onto public com.thinvent.library.vo.PositionVO com.thinvent.basicpf.controller.PositionController.get(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.495  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/position/updatePosition],methods=[POST]}" onto public void com.thinvent.basicpf.controller.PositionController.update(com.thinvent.library.vo.PositionVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.495  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/position/delPosition],methods=[GET]}" onto public void com.thinvent.basicpf.controller.PositionController.delete(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.496  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/position/getPosByName],methods=[GET]}" onto public java.util.List<com.thinvent.library.vo.PositionVO> com.thinvent.basicpf.controller.PositionController.getPosByName(java.lang.String,int,int) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.497  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/position/listAllPositionDistinctByName],methods=[GET]}" onto public java.util.List<com.thinvent.library.vo.PositionVO> com.thinvent.basicpf.controller.PositionController.listAllPosition()
+2018-06-06 10:37:47.497  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/position/getPositionByPosName],methods=[GET]}" onto public com.thinvent.library.vo.PositionVO com.thinvent.basicpf.controller.PositionController.findOneByPosName(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.497  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/position/getPositionByPosNameAndPosType],methods=[GET]}" onto public com.thinvent.library.vo.PositionVO com.thinvent.basicpf.controller.PositionController.getPositionByPosNameAndPosType(java.lang.String,java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.497  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/position/listPositionByConditions],methods=[GET]}" onto public java.lang.Object com.thinvent.basicpf.controller.PositionController.listPositionByConditions(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.499  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/role/getRoleList],methods=[GET]}" onto public java.lang.Object com.thinvent.basicpf.controller.RoleController.list(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.499  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/role/getRoleByRoleId],methods=[GET]}" onto public java.lang.Object com.thinvent.basicpf.controller.RoleController.getRoleByRoleId(java.lang.String)
+2018-06-06 10:37:47.500  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/role/updateRole],methods=[POST]}" onto public void com.thinvent.basicpf.controller.RoleController.updateRole(com.thinvent.library.vo.RoleVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.500  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/role/deleteRole],methods=[GET]}" onto public void com.thinvent.basicpf.controller.RoleController.deleteRole(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.500  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/role/findAllRole],methods=[GET]}" onto public java.util.List com.thinvent.basicpf.controller.RoleController.findAllRole() throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.502  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/role/addRole],methods=[POST]}" onto public void com.thinvent.basicpf.controller.RoleController.addRole(com.thinvent.library.vo.RoleVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.503  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/role/findAllRoleByUserId],methods=[GET]}" onto public java.util.List<com.thinvent.library.vo.RoleVO> com.thinvent.basicpf.controller.RoleController.findAllRoleByUserId(java.lang.String)
+2018-06-06 10:37:47.505  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roleMoudle/save],methods=[GET]}" onto public java.lang.String com.thinvent.basicpf.controller.RoleMoudleController.save(java.lang.String,java.lang.String,java.lang.String)
+2018-06-06 10:37:47.505  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/roleMoudle/getListByRoleId],methods=[GET]}" onto public java.util.List<com.thinvent.basicpf.model.RoleMoudle> com.thinvent.basicpf.controller.RoleMoudleController.getList(java.lang.String)
+2018-06-06 10:37:47.508  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sysconf/getByConfId],methods=[GET]}" onto public com.thinvent.basicpf.model.Config com.thinvent.basicpf.controller.SysConfController.get(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.508  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sysconf/updateSysParam],methods=[POST]}" onto public void com.thinvent.basicpf.controller.SysConfController.update(com.thinvent.library.vo.ConfigVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.509  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sysconf/deleteSysParam],methods=[GET]}" onto public void com.thinvent.basicpf.controller.SysConfController.delete(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.509  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sysconf/saveSysParam],methods=[POST]}" onto public void com.thinvent.basicpf.controller.SysConfController.saveSysParam(com.thinvent.library.vo.ConfigVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.510  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sysconf/querySysParam],methods=[GET]}" onto public org.springframework.data.domain.Page<com.thinvent.basicpf.model.Config> com.thinvent.basicpf.controller.SysConfController.querySysConfParam(int,java.lang.Integer,java.lang.Integer) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.510  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sysconf/findConfigByConfKey],methods=[GET]}" onto public com.thinvent.basicpf.model.Config com.thinvent.basicpf.controller.SysConfController.findConfigByConfKey(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.513  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sysRegister/sysRegisterOne],methods=[GET]}" onto public com.thinvent.basicpf.model.Moudle com.thinvent.basicpf.controller.SysRegisterController.sysRegisterOne(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.514  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sysRegister/sysRegisterAdd],methods=[POST]}" onto public java.lang.String com.thinvent.basicpf.controller.SysRegisterController.sysRegisterAdd(com.thinvent.library.vo.MoudleVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.514  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sysRegister/sysRegisterDel],methods=[GET]}" onto public void com.thinvent.basicpf.controller.SysRegisterController.sysRegisterDel(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.514  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sysRegister/sysRegisterList],methods=[GET]}" onto public java.lang.Object com.thinvent.basicpf.controller.SysRegisterController.sysRegisterList(java.lang.String,int,int) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.559  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sysRegister/sysRegisterUpdate],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.String> com.thinvent.basicpf.controller.SysRegisterController.sysRegisterUpdate(com.thinvent.library.vo.MoudleVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.561  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/getUsersByDepId],methods=[GET]}" onto public java.util.List<com.thinvent.library.vo.UserVO> com.thinvent.basicpf.controller.UserController.getUsersByDepId(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.562  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/getUserByUserId],methods=[GET]}" onto public java.lang.Object com.thinvent.basicpf.controller.UserController.findUserByUserId(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.562  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/saveUser],methods=[POST]}" onto public void com.thinvent.basicpf.controller.UserController.saveUser(com.thinvent.library.vo.UserVO)
+2018-06-06 10:37:47.562  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/deleteUser],methods=[GET]}" onto public void com.thinvent.basicpf.controller.UserController.deleteUser(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.563  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/updateUser],methods=[POST]}" onto public void com.thinvent.basicpf.controller.UserController.updateUser(com.thinvent.library.vo.UserVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.563  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/listAllUser],methods=[GET]}" onto public java.lang.Object com.thinvent.basicpf.controller.UserController.listAllUser()
+2018-06-06 10:37:47.564  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/saveUserList],methods=[POST]}" onto public void com.thinvent.basicpf.controller.UserController.saveUserList(java.util.List<com.thinvent.library.vo.UserVO>) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.564  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/updateUserAllInfo],methods=[POST]}" onto public void com.thinvent.basicpf.controller.UserController.updateUserAllInfo(com.thinvent.library.vo.UserVO) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.564  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/getUserByLoginName],methods=[GET]}" onto public java.lang.Object com.thinvent.basicpf.controller.UserController.findUserByLoginName(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.565  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/listUserByConditions],methods=[POST]}" onto public java.lang.Object com.thinvent.basicpf.controller.UserController.listUserByConditions(int,int,int,java.lang.String,java.lang.String,java.util.List<java.lang.String>,java.util.List<java.lang.String>)
+2018-06-06 10:37:47.569  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userRole/saveUserRole],methods=[POST]}" onto public void com.thinvent.basicpf.controller.UserRoleController.saveUserRole(com.thinvent.library.vo.UserRoleVO)
+2018-06-06 10:37:47.569  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userRole/updateUserRole],methods=[POST]}" onto public void com.thinvent.basicpf.controller.UserRoleController.updateUserRole(com.thinvent.library.vo.UserRoleVO)
+2018-06-06 10:37:47.595  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userRole/getUserRoleByUserId],methods=[GET]}" onto public java.lang.Object com.thinvent.basicpf.controller.UserRoleController.getUserRoleByUserId(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.596  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userRole/getUserRoleByRoleId],methods=[GET]}" onto public java.lang.Object com.thinvent.basicpf.controller.UserRoleController.getUserRoleByRoleId(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.596  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userRole/queryUserIdsByRoleIds],methods=[GET]}" onto public java.util.List<java.lang.String> com.thinvent.basicpf.controller.UserRoleController.queryUserIdsByRoleIds(java.lang.String) throws com.thinvent.library.exception.ThinventBaseException
+2018-06-06 10:37:47.598  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2018-06-06 10:37:47.602  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-06-06 10:37:47.604  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-06-06 10:37:47.604  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-06-06 10:37:47.608  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-06 10:37:47.609  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 10:37:48.671  INFO 2292 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4409e975: startup date [Wed Jun 06 10:36:55 CST 2018]; root of context hierarchy
+2018-06-06 10:37:49.090  INFO 2292 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 10:37:49.091  INFO 2292 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 10:37:49.769  INFO 2292 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in thinventBaseExceptionHandler
+2018-06-06 10:37:49.860  INFO 2292 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 10:37:52.290  INFO 2292 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-06 10:37:52.336  INFO 2292 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-06-06 10:37:52.355  INFO 2292 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2018-06-06 10:37:52.695  INFO 2292 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2018-06-06 10:37:52.711  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-06 10:37:52.726  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was sys-conf-controller
+2018-06-06 10:37:52.789  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: delete belongs to groups: [[ResourceGroup{groupName='sys-conf-controller', position=0, controller=com.thinvent.basicpf.controller.SysConfController}]] 
+2018-06-06 10:37:52.791  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method findConfigByConfKey was sys-conf-controller
+2018-06-06 10:37:52.791  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: findConfigByConfKey belongs to groups: [[ResourceGroup{groupName='sys-conf-controller', position=0, controller=com.thinvent.basicpf.controller.SysConfController}]] 
+2018-06-06 10:37:52.792  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method get was sys-conf-controller
+2018-06-06 10:37:52.792  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: get belongs to groups: [[ResourceGroup{groupName='sys-conf-controller', position=0, controller=com.thinvent.basicpf.controller.SysConfController}]] 
+2018-06-06 10:37:52.793  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method querySysConfParam was sys-conf-controller
+2018-06-06 10:37:52.793  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: querySysConfParam belongs to groups: [[ResourceGroup{groupName='sys-conf-controller', position=0, controller=com.thinvent.basicpf.controller.SysConfController}]] 
+2018-06-06 10:37:52.794  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method saveSysParam was sys-conf-controller
+2018-06-06 10:37:52.794  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: saveSysParam belongs to groups: [[ResourceGroup{groupName='sys-conf-controller', position=0, controller=com.thinvent.basicpf.controller.SysConfController}]] 
+2018-06-06 10:37:52.795  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was sys-conf-controller
+2018-06-06 10:37:52.795  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: update belongs to groups: [[ResourceGroup{groupName='sys-conf-controller', position=0, controller=com.thinvent.basicpf.controller.SysConfController}]] 
+2018-06-06 10:37:52.808  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /Config/sys-conf-controller Description: sys-conf-controller Position: 0
+2018-06-06 10:37:52.929  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:52.929  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-06 10:37:52.944  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:52.944  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-06 10:37:52.958  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /sysconf/deleteSysParam.com.thinvent.basicpf.controller.SysConfController.delete.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:52.958  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /sysconf/deleteSysParam.com.thinvent.basicpf.controller.SysConfController.delete.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.053  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was sys-conf-controller
+2018-06-06 10:37:53.116  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was sys-conf-controller
+2018-06-06 10:37:53.151  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.basicpf.model.Config(true)
+2018-06-06 10:37:53.151  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.basicpf.model.Config(true)
+2018-06-06 10:37:53.153  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.basicpf.model.Config(true)
+2018-06-06 10:37:53.153  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.basicpf.model.Config(true)
+2018-06-06 10:37:53.317  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.basicpf.model.Config(true)
+2018-06-06 10:37:53.317  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.basicpf.model.Config(true)
+2018-06-06 10:37:53.318  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.basicpf.model.Config(true)
+2018-06-06 10:37:53.318  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.basicpf.model.Config(true)
+2018-06-06 10:37:53.319  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /sysconf/findConfigByConfKey.com.thinvent.basicpf.controller.SysConfController.findConfigByConfKey.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.319  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /sysconf/findConfigByConfKey.com.thinvent.basicpf.controller.SysConfController.findConfigByConfKey.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.324  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method findConfigByConfKey was sys-conf-controller
+2018-06-06 10:37:53.326  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method findConfigByConfKey was sys-conf-controller
+2018-06-06 10:37:53.329  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.basicpf.model.Config(true)
+2018-06-06 10:37:53.329  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.basicpf.model.Config(true)
+2018-06-06 10:37:53.330  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.basicpf.model.Config(true)
+2018-06-06 10:37:53.330  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.basicpf.model.Config(true)
+2018-06-06 10:37:53.330  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /sysconf/getByConfId.com.thinvent.basicpf.controller.SysConfController.get.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.330  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /sysconf/getByConfId.com.thinvent.basicpf.controller.SysConfController.get.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.341  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method get was sys-conf-controller
+2018-06-06 10:37:53.350  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method get was sys-conf-controller
+2018-06-06 10:37:53.357  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: org.springframework.data.domain.Page<com.thinvent.basicpf.model.Config>(true)
+2018-06-06 10:37:53.357  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key org.springframework.data.domain.Page<com.thinvent.basicpf.model.Config>(true)
+2018-06-06 10:37:53.358  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.data.domain.Page<com.thinvent.basicpf.model.Config>(true)
+2018-06-06 10:37:53.358  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.data.domain.Page<com.thinvent.basicpf.model.Config>(true)
+2018-06-06 10:37:53.367  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: org.springframework.data.domain.Page<com.thinvent.basicpf.model.Config>(true)
+2018-06-06 10:37:53.368  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key org.springframework.data.domain.Page<com.thinvent.basicpf.model.Config>(true)
+2018-06-06 10:37:53.368  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.basicpf.model.Config(true)
+2018-06-06 10:37:53.369  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.basicpf.model.Config(true)
+2018-06-06 10:37:53.369  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.data.domain.Page<com.thinvent.basicpf.model.Config>(true)
+2018-06-06 10:37:53.369  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.data.domain.Page<com.thinvent.basicpf.model.Config>(true)
+2018-06-06 10:37:53.370  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.basicpf.model.Config(true)
+2018-06-06 10:37:53.387  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.basicpf.model.Config(true)
+2018-06-06 10:37:53.390  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.data.domain.Sort(true)
+2018-06-06 10:37:53.391  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.data.domain.Sort(true)
+2018-06-06 10:37:53.400  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.basicpf.model.Config(true)
+2018-06-06 10:37:53.400  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.basicpf.model.Config(true)
+2018-06-06 10:37:53.401  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.data.domain.Sort(true)
+2018-06-06 10:37:53.401  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.data.domain.Sort(true)
+2018-06-06 10:37:53.402  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /sysconf/querySysParam.com.thinvent.basicpf.controller.SysConfController.querySysConfParam.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.403  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /sysconf/querySysParam.com.thinvent.basicpf.controller.SysConfController.querySysConfParam.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.458  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method querySysConfParam was sys-conf-controller
+2018-06-06 10:37:53.461  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method querySysConfParam was sys-conf-controller
+2018-06-06 10:37:53.464  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:53.465  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-06 10:37:53.465  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:53.465  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-06 10:37:53.466  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.ConfigVO(false)
+2018-06-06 10:37:53.466  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.library.vo.ConfigVO(false)
+2018-06-06 10:37:53.467  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.ConfigVO(false)
+2018-06-06 10:37:53.467  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.ConfigVO(false)
+2018-06-06 10:37:53.479  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.ConfigVO(false)
+2018-06-06 10:37:53.479  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.library.vo.ConfigVO(false)
+2018-06-06 10:37:53.480  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.ConfigVO(false)
+2018-06-06 10:37:53.480  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.ConfigVO(false)
+2018-06-06 10:37:53.482  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /sysconf/saveSysParam.com.thinvent.basicpf.controller.SysConfController.saveSysParam.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.483  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /sysconf/saveSysParam.com.thinvent.basicpf.controller.SysConfController.saveSysParam.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.530  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method saveSysParam was sys-conf-controller
+2018-06-06 10:37:53.531  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method saveSysParam was sys-conf-controller
+2018-06-06 10:37:53.533  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:53.533  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-06 10:37:53.533  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:53.534  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-06 10:37:53.534  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.ConfigVO(false)
+2018-06-06 10:37:53.534  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.library.vo.ConfigVO(false)
+2018-06-06 10:37:53.535  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.ConfigVO(false)
+2018-06-06 10:37:53.535  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.library.vo.ConfigVO(false)
+2018-06-06 10:37:53.536  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /sysconf/updateSysParam.com.thinvent.basicpf.controller.SysConfController.update.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.536  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /sysconf/updateSysParam.com.thinvent.basicpf.controller.SysConfController.update.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.538  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was sys-conf-controller
+2018-06-06 10:37:53.540  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was sys-conf-controller
+2018-06-06 10:37:53.579  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-06 10:37:53.579  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteCompany was company-controller
+2018-06-06 10:37:53.580  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: deleteCompany belongs to groups: [[ResourceGroup{groupName='company-controller', position=0, controller=com.thinvent.basicpf.controller.CompanyController}]] 
+2018-06-06 10:37:53.580  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listAllCompanyByEnable was company-controller
+2018-06-06 10:37:53.580  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: listAllCompanyByEnable belongs to groups: [[ResourceGroup{groupName='company-controller', position=0, controller=com.thinvent.basicpf.controller.CompanyController}]] 
+2018-06-06 10:37:53.580  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listAllCompany was company-controller
+2018-06-06 10:37:53.580  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: listAllCompany belongs to groups: [[ResourceGroup{groupName='company-controller', position=0, controller=com.thinvent.basicpf.controller.CompanyController}]] 
+2018-06-06 10:37:53.581  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method queryByComId was company-controller
+2018-06-06 10:37:53.581  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: queryByComId belongs to groups: [[ResourceGroup{groupName='company-controller', position=0, controller=com.thinvent.basicpf.controller.CompanyController}]] 
+2018-06-06 10:37:53.586  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method queryCompanyList was company-controller
+2018-06-06 10:37:53.586  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: queryCompanyList belongs to groups: [[ResourceGroup{groupName='company-controller', position=0, controller=com.thinvent.basicpf.controller.CompanyController}]] 
+2018-06-06 10:37:53.586  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method saveCompany was company-controller
+2018-06-06 10:37:53.586  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: saveCompany belongs to groups: [[ResourceGroup{groupName='company-controller', position=0, controller=com.thinvent.basicpf.controller.CompanyController}]] 
+2018-06-06 10:37:53.588  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /company/company-controller Description: company-controller Position: 0
+2018-06-06 10:37:53.589  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2018-06-06 10:37:53.590  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.String(true)
+2018-06-06 10:37:53.590  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2018-06-06 10:37:53.590  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2018-06-06 10:37:53.590  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /company/deleteCompany.com.thinvent.basicpf.controller.CompanyController.deleteCompany.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.590  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /company/deleteCompany.com.thinvent.basicpf.controller.CompanyController.deleteCompany.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.592  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteCompany was company-controller
+2018-06-06 10:37:53.593  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteCompany was company-controller
+2018-06-06 10:37:53.597  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.library.vo.CompanyVO>(true)
+2018-06-06 10:37:53.597  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.thinvent.library.vo.CompanyVO>(true)
+2018-06-06 10:37:53.597  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.library.vo.CompanyVO>(true)
+2018-06-06 10:37:53.597  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.thinvent.library.vo.CompanyVO>(true)
+2018-06-06 10:37:53.597  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.CompanyVO(true)
+2018-06-06 10:37:53.598  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.CompanyVO(true)
+2018-06-06 10:37:53.603  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.thinvent.library.vo.CompanyVO>(true)
+2018-06-06 10:37:53.603  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.thinvent.library.vo.CompanyVO>(true)
+2018-06-06 10:37:53.604  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.CompanyVO(true)
+2018-06-06 10:37:53.608  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.CompanyVO(true)
+2018-06-06 10:37:53.608  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /company/listAllCompany.com.thinvent.basicpf.controller.CompanyController.listAllCompany.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.609  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /company/listAllCompany.com.thinvent.basicpf.controller.CompanyController.listAllCompany.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.610  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listAllCompany was company-controller
+2018-06-06 10:37:53.612  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listAllCompany was company-controller
+2018-06-06 10:37:53.614  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.library.vo.CompanyVO>(true)
+2018-06-06 10:37:53.615  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.thinvent.library.vo.CompanyVO>(true)
+2018-06-06 10:37:53.615  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.library.vo.CompanyVO>(true)
+2018-06-06 10:37:53.615  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.thinvent.library.vo.CompanyVO>(true)
+2018-06-06 10:37:53.615  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.CompanyVO(true)
+2018-06-06 10:37:53.616  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.CompanyVO(true)
+2018-06-06 10:37:53.617  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /company/listAllCompanyByEnable.com.thinvent.basicpf.controller.CompanyController.listAllCompanyByEnable.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.617  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /company/listAllCompanyByEnable.com.thinvent.basicpf.controller.CompanyController.listAllCompanyByEnable.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.624  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listAllCompanyByEnable was company-controller
+2018-06-06 10:37:53.628  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listAllCompanyByEnable was company-controller
+2018-06-06 10:37:53.630  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:53.630  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2018-06-06 10:37:53.630  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:53.630  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2018-06-06 10:37:53.631  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /company/queryByComId.com.thinvent.basicpf.controller.CompanyController.queryByComId.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.631  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /company/queryByComId.com.thinvent.basicpf.controller.CompanyController.queryByComId.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.633  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method queryByComId was company-controller
+2018-06-06 10:37:53.634  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method queryByComId was company-controller
+2018-06-06 10:37:53.637  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: org.springframework.data.domain.Page<com.thinvent.basicpf.model.Company>(true)
+2018-06-06 10:37:53.732  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key org.springframework.data.domain.Page<com.thinvent.basicpf.model.Company>(true)
+2018-06-06 10:37:53.733  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.data.domain.Page<com.thinvent.basicpf.model.Company>(true)
+2018-06-06 10:37:53.734  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.data.domain.Page<com.thinvent.basicpf.model.Company>(true)
+2018-06-06 10:37:53.739  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: org.springframework.data.domain.Page<com.thinvent.basicpf.model.Company>(true)
+2018-06-06 10:37:53.739  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key org.springframework.data.domain.Page<com.thinvent.basicpf.model.Company>(true)
+2018-06-06 10:37:53.740  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.basicpf.model.Company(true)
+2018-06-06 10:37:53.740  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.basicpf.model.Company(true)
+2018-06-06 10:37:53.743  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.data.domain.Page<com.thinvent.basicpf.model.Company>(true)
+2018-06-06 10:37:53.743  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.data.domain.Page<com.thinvent.basicpf.model.Company>(true)
+2018-06-06 10:37:53.743  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.basicpf.model.Company(true)
+2018-06-06 10:37:53.744  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.basicpf.model.Company(true)
+2018-06-06 10:37:53.744  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.data.domain.Sort(true)
+2018-06-06 10:37:53.744  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.data.domain.Sort(true)
+2018-06-06 10:37:53.744  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.basicpf.model.Company(true)
+2018-06-06 10:37:53.744  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.basicpf.model.Company(true)
+2018-06-06 10:37:53.745  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.data.domain.Sort(true)
+2018-06-06 10:37:53.745  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.data.domain.Sort(true)
+2018-06-06 10:37:53.745  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /company/queryCompanyList.com.thinvent.basicpf.controller.CompanyController.queryCompanyList.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.745  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /company/queryCompanyList.com.thinvent.basicpf.controller.CompanyController.queryCompanyList.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.750  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method queryCompanyList was company-controller
+2018-06-06 10:37:53.751  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method queryCompanyList was company-controller
+2018-06-06 10:37:53.754  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.CompanyVO(false)
+2018-06-06 10:37:53.754  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.library.vo.CompanyVO(false)
+2018-06-06 10:37:53.754  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.CompanyVO(false)
+2018-06-06 10:37:53.754  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.CompanyVO(false)
+2018-06-06 10:37:53.758  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.CompanyVO(false)
+2018-06-06 10:37:53.758  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.library.vo.CompanyVO(false)
+2018-06-06 10:37:53.758  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.CompanyVO(false)
+2018-06-06 10:37:53.758  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.CompanyVO(false)
+2018-06-06 10:37:53.759  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2018-06-06 10:37:53.759  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.String(true)
+2018-06-06 10:37:53.759  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2018-06-06 10:37:53.759  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2018-06-06 10:37:53.759  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /company/saveCompany.com.thinvent.basicpf.controller.CompanyController.saveCompany.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.759  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /company/saveCompany.com.thinvent.basicpf.controller.CompanyController.saveCompany.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.761  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method saveCompany was company-controller
+2018-06-06 10:37:53.763  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method saveCompany was company-controller
+2018-06-06 10:37:53.766  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-06 10:37:53.767  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method add was department-controller
+2018-06-06 10:37:53.767  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: add belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.thinvent.basicpf.controller.DepartmentController}]] 
+2018-06-06 10:37:53.767  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was department-controller
+2018-06-06 10:37:53.768  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: delete belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.thinvent.basicpf.controller.DepartmentController}]] 
+2018-06-06 10:37:53.768  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getAllDepartmentsById was department-controller
+2018-06-06 10:37:53.769  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getAllDepartmentsById belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.thinvent.basicpf.controller.DepartmentController}]] 
+2018-06-06 10:37:53.769  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getDepartmentAllData was department-controller
+2018-06-06 10:37:53.770  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getDepartmentAllData belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.thinvent.basicpf.controller.DepartmentController}]] 
+2018-06-06 10:37:53.772  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method get was department-controller
+2018-06-06 10:37:53.774  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: get belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.thinvent.basicpf.controller.DepartmentController}]] 
+2018-06-06 10:37:53.775  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getDepartmentByName was department-controller
+2018-06-06 10:37:53.776  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getDepartmentByName belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.thinvent.basicpf.controller.DepartmentController}]] 
+2018-06-06 10:37:53.777  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getByName was department-controller
+2018-06-06 10:37:53.777  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getByName belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.thinvent.basicpf.controller.DepartmentController}]] 
+2018-06-06 10:37:53.777  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getTreeDepartmentsById was department-controller
+2018-06-06 10:37:53.777  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getTreeDepartmentsById belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.thinvent.basicpf.controller.DepartmentController}]] 
+2018-06-06 10:37:53.778  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getTreeDepartmentsByUserId was department-controller
+2018-06-06 10:37:53.780  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getTreeDepartmentsByUserId belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.thinvent.basicpf.controller.DepartmentController}]] 
+2018-06-06 10:37:53.781  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was department-controller
+2018-06-06 10:37:53.781  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: update belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.thinvent.basicpf.controller.DepartmentController}]] 
+2018-06-06 10:37:53.786  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /department/department-controller Description: department-controller Position: 0
+2018-06-06 10:37:53.790  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:53.790  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-06 10:37:53.791  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:53.791  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-06 10:37:53.791  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.DepartmentVO(false)
+2018-06-06 10:37:53.791  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.library.vo.DepartmentVO(false)
+2018-06-06 10:37:53.792  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.DepartmentVO(false)
+2018-06-06 10:37:53.792  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.DepartmentVO(false)
+2018-06-06 10:37:53.797  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.DepartmentVO(false)
+2018-06-06 10:37:53.797  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.library.vo.DepartmentVO(false)
+2018-06-06 10:37:53.797  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.DepartmentVO(false)
+2018-06-06 10:37:53.798  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.DepartmentVO(false)
+2018-06-06 10:37:53.798  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /department/addDepartment.com.thinvent.basicpf.controller.DepartmentController.add.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.798  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /department/addDepartment.com.thinvent.basicpf.controller.DepartmentController.add.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.801  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method add was department-controller
+2018-06-06 10:37:53.803  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method add was department-controller
+2018-06-06 10:37:53.806  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:53.806  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-06 10:37:53.806  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:53.806  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-06 10:37:53.806  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /department/delDepartment.com.thinvent.basicpf.controller.DepartmentController.delete.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.807  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /department/delDepartment.com.thinvent.basicpf.controller.DepartmentController.delete.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.810  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was department-controller
+2018-06-06 10:37:53.813  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was department-controller
+2018-06-06 10:37:53.815  INFO 2292 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_1
+2018-06-06 10:37:53.817  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.basicpf.model.Department(true)
+2018-06-06 10:37:53.911  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.basicpf.model.Department(true)
+2018-06-06 10:37:53.911  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.basicpf.model.Department(true)
+2018-06-06 10:37:53.911  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.basicpf.model.Department(true)
+2018-06-06 10:37:53.915  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.basicpf.model.Department(true)
+2018-06-06 10:37:53.915  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.basicpf.model.Department(true)
+2018-06-06 10:37:53.915  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.basicpf.model.Department(true)
+2018-06-06 10:37:53.915  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.basicpf.model.Department(true)
+2018-06-06 10:37:53.916  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /department/getDepartmentById.com.thinvent.basicpf.controller.DepartmentController.get.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.916  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /department/getDepartmentById.com.thinvent.basicpf.controller.DepartmentController.get.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.918  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method get was department-controller
+2018-06-06 10:37:53.919  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method get was department-controller
+2018-06-06 10:37:53.920  INFO 2292 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_1
+2018-06-06 10:37:53.922  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.basicpf.model.Department>(true)
+2018-06-06 10:37:53.922  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.thinvent.basicpf.model.Department>(true)
+2018-06-06 10:37:53.922  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.basicpf.model.Department>(true)
+2018-06-06 10:37:53.922  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.thinvent.basicpf.model.Department>(true)
+2018-06-06 10:37:53.922  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.basicpf.model.Department(true)
+2018-06-06 10:37:53.923  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.basicpf.model.Department(true)
+2018-06-06 10:37:53.923  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.thinvent.basicpf.model.Department>(true)
+2018-06-06 10:37:53.923  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.thinvent.basicpf.model.Department>(true)
+2018-06-06 10:37:53.923  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.basicpf.model.Department(true)
+2018-06-06 10:37:53.923  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.basicpf.model.Department(true)
+2018-06-06 10:37:53.924  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /department/getAllDepartmentsById.com.thinvent.basicpf.controller.DepartmentController.getAllDepartmentsById.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.974  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /department/getAllDepartmentsById.com.thinvent.basicpf.controller.DepartmentController.getAllDepartmentsById.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.978  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getAllDepartmentsById was department-controller
+2018-06-06 10:37:53.981  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getAllDepartmentsById was department-controller
+2018-06-06 10:37:53.987  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.basicpf.model.Department(true)
+2018-06-06 10:37:53.987  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.basicpf.model.Department(true)
+2018-06-06 10:37:53.988  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.basicpf.model.Department(true)
+2018-06-06 10:37:53.988  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.basicpf.model.Department(true)
+2018-06-06 10:37:53.988  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /department/getDeptByName.com.thinvent.basicpf.controller.DepartmentController.getByName.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.988  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /department/getDeptByName.com.thinvent.basicpf.controller.DepartmentController.getByName.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.991  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getByName was department-controller
+2018-06-06 10:37:53.993  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getByName was department-controller
+2018-06-06 10:37:53.995  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2018-06-06 10:37:53.995  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.String(true)
+2018-06-06 10:37:53.995  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2018-06-06 10:37:53.995  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2018-06-06 10:37:53.996  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /department/getDepartmentAllData.com.thinvent.basicpf.controller.DepartmentController.getDepartmentAllData.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.996  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /department/getDepartmentAllData.com.thinvent.basicpf.controller.DepartmentController.getDepartmentAllData.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:53.997  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getDepartmentAllData was department-controller
+2018-06-06 10:37:53.998  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getDepartmentAllData was department-controller
+2018-06-06 10:37:54.000  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.library.vo.DepartmentVO>(true)
+2018-06-06 10:37:54.000  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.thinvent.library.vo.DepartmentVO>(true)
+2018-06-06 10:37:54.001  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.library.vo.DepartmentVO>(true)
+2018-06-06 10:37:54.001  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.thinvent.library.vo.DepartmentVO>(true)
+2018-06-06 10:37:54.024  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.DepartmentVO(true)
+2018-06-06 10:37:54.024  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.DepartmentVO(true)
+2018-06-06 10:37:54.029  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.thinvent.library.vo.DepartmentVO>(true)
+2018-06-06 10:37:54.029  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.thinvent.library.vo.DepartmentVO>(true)
+2018-06-06 10:37:54.030  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.DepartmentVO(true)
+2018-06-06 10:37:54.030  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.DepartmentVO(true)
+2018-06-06 10:37:54.030  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /department/getDepartmentByName.com.thinvent.basicpf.controller.DepartmentController.getDepartmentByName.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.031  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /department/getDepartmentByName.com.thinvent.basicpf.controller.DepartmentController.getDepartmentByName.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.033  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getDepartmentByName was department-controller
+2018-06-06 10:37:54.034  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getDepartmentByName was department-controller
+2018-06-06 10:37:54.048  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<java.util.Map>(true)
+2018-06-06 10:37:54.049  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<java.util.Map>(true)
+2018-06-06 10:37:54.056  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<java.util.Map>(true)
+2018-06-06 10:37:54.056  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<java.util.Map>(true)
+2018-06-06 10:37:54.056  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<java.util.Map>(true)
+2018-06-06 10:37:54.057  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<java.util.Map>(true)
+2018-06-06 10:37:54.059  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /department/getTreeDepartmentsById.com.thinvent.basicpf.controller.DepartmentController.getTreeDepartmentsById.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.059  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /department/getTreeDepartmentsById.com.thinvent.basicpf.controller.DepartmentController.getTreeDepartmentsById.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.062  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getTreeDepartmentsById was department-controller
+2018-06-06 10:37:54.068  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getTreeDepartmentsById was department-controller
+2018-06-06 10:37:54.070  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<java.util.Map>(true)
+2018-06-06 10:37:54.137  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<java.util.Map>(true)
+2018-06-06 10:37:54.138  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<java.util.Map>(true)
+2018-06-06 10:37:54.138  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<java.util.Map>(true)
+2018-06-06 10:37:54.139  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /department/getTreeDepartmentsByUserId.com.thinvent.basicpf.controller.DepartmentController.getTreeDepartmentsByUserId.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.139  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /department/getTreeDepartmentsByUserId.com.thinvent.basicpf.controller.DepartmentController.getTreeDepartmentsByUserId.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.141  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getTreeDepartmentsByUserId was department-controller
+2018-06-06 10:37:54.143  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getTreeDepartmentsByUserId was department-controller
+2018-06-06 10:37:54.145  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.145  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-06 10:37:54.145  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.145  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-06 10:37:54.145  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.DepartmentVO(false)
+2018-06-06 10:37:54.145  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.library.vo.DepartmentVO(false)
+2018-06-06 10:37:54.145  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.DepartmentVO(false)
+2018-06-06 10:37:54.146  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.library.vo.DepartmentVO(false)
+2018-06-06 10:37:54.146  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /department/updateDepartment.com.thinvent.basicpf.controller.DepartmentController.update.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.146  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /department/updateDepartment.com.thinvent.basicpf.controller.DepartmentController.update.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.149  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was department-controller
+2018-06-06 10:37:54.150  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was department-controller
+2018-06-06 10:37:54.151  INFO 2292 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_1
+2018-06-06 10:37:54.152  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-06 10:37:54.153  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method queryMonitorPointVideoByMonitorPointDataId was monitor-point-video-controller
+2018-06-06 10:37:54.153  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: queryMonitorPointVideoByMonitorPointDataId belongs to groups: [[ResourceGroup{groupName='monitor-point-video-controller', position=0, controller=com.thinvent.basicpf.controller.MonitorPointVideoController}]] 
+2018-06-06 10:37:54.156  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method saveMonitorPointVideo was monitor-point-video-controller
+2018-06-06 10:37:54.156  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: saveMonitorPointVideo belongs to groups: [[ResourceGroup{groupName='monitor-point-video-controller', position=0, controller=com.thinvent.basicpf.controller.MonitorPointVideoController}]] 
+2018-06-06 10:37:54.156  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method updateMonitorPointVideo was monitor-point-video-controller
+2018-06-06 10:37:54.157  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: updateMonitorPointVideo belongs to groups: [[ResourceGroup{groupName='monitor-point-video-controller', position=0, controller=com.thinvent.basicpf.controller.MonitorPointVideoController}]] 
+2018-06-06 10:37:54.158  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /monitorPointVideo/monitor-point-video-controller Description: monitor-point-video-controller Position: 0
+2018-06-06 10:37:54.159  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.library.vo.MonitorPointVideoVO>(true)
+2018-06-06 10:37:54.159  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.thinvent.library.vo.MonitorPointVideoVO>(true)
+2018-06-06 10:37:54.160  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.library.vo.MonitorPointVideoVO>(true)
+2018-06-06 10:37:54.160  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.thinvent.library.vo.MonitorPointVideoVO>(true)
+2018-06-06 10:37:54.160  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.MonitorPointVideoVO(true)
+2018-06-06 10:37:54.160  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.MonitorPointVideoVO(true)
+2018-06-06 10:37:54.166  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.thinvent.library.vo.MonitorPointVideoVO>(true)
+2018-06-06 10:37:54.166  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.thinvent.library.vo.MonitorPointVideoVO>(true)
+2018-06-06 10:37:54.166  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.MonitorPointVideoVO(true)
+2018-06-06 10:37:54.166  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.MonitorPointVideoVO(true)
+2018-06-06 10:37:54.167  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /monitorPointVideo/queryMonitorPointVideoByMonitorPointDataId.com.thinvent.basicpf.controller.MonitorPointVideoController.queryMonitorPointVideoByMonitorPointDataId.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.167  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /monitorPointVideo/queryMonitorPointVideoByMonitorPointDataId.com.thinvent.basicpf.controller.MonitorPointVideoController.queryMonitorPointVideoByMonitorPointDataId.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.169  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method queryMonitorPointVideoByMonitorPointDataId was monitor-point-video-controller
+2018-06-06 10:37:54.170  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method queryMonitorPointVideoByMonitorPointDataId was monitor-point-video-controller
+2018-06-06 10:37:54.178  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.MonitorPointVideoVO(false)
+2018-06-06 10:37:54.178  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.library.vo.MonitorPointVideoVO(false)
+2018-06-06 10:37:54.178  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.MonitorPointVideoVO(false)
+2018-06-06 10:37:54.178  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.MonitorPointVideoVO(false)
+2018-06-06 10:37:54.185  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.MonitorPointVideoVO(false)
+2018-06-06 10:37:54.185  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.library.vo.MonitorPointVideoVO(false)
+2018-06-06 10:37:54.185  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.MonitorPointVideoVO(false)
+2018-06-06 10:37:54.185  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.MonitorPointVideoVO(false)
+2018-06-06 10:37:54.186  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.186  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-06 10:37:54.186  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.186  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-06 10:37:54.186  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /monitorPointVideo/saveMonitorPointVideo.com.thinvent.basicpf.controller.MonitorPointVideoController.saveMonitorPointVideo.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.186  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /monitorPointVideo/saveMonitorPointVideo.com.thinvent.basicpf.controller.MonitorPointVideoController.saveMonitorPointVideo.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.189  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method saveMonitorPointVideo was monitor-point-video-controller
+2018-06-06 10:37:54.191  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method saveMonitorPointVideo was monitor-point-video-controller
+2018-06-06 10:37:54.193  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.MonitorPointVideoVO(false)
+2018-06-06 10:37:54.193  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.library.vo.MonitorPointVideoVO(false)
+2018-06-06 10:37:54.194  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.MonitorPointVideoVO(false)
+2018-06-06 10:37:54.194  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.library.vo.MonitorPointVideoVO(false)
+2018-06-06 10:37:54.195  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.195  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-06 10:37:54.197  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.197  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-06 10:37:54.199  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /monitorPointVideo/updateMonitorPointVideo.com.thinvent.basicpf.controller.MonitorPointVideoController.updateMonitorPointVideo.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.200  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /monitorPointVideo/updateMonitorPointVideo.com.thinvent.basicpf.controller.MonitorPointVideoController.updateMonitorPointVideo.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.203  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method updateMonitorPointVideo was monitor-point-video-controller
+2018-06-06 10:37:54.207  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method updateMonitorPointVideo was monitor-point-video-controller
+2018-06-06 10:37:54.209  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-06 10:37:54.210  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getAll was moudle-controller
+2018-06-06 10:37:54.210  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getAll belongs to groups: [[ResourceGroup{groupName='moudle-controller', position=0, controller=com.thinvent.basicpf.controller.MoudleController}]] 
+2018-06-06 10:37:54.211  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getForbidList was moudle-controller
+2018-06-06 10:37:54.211  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getForbidList belongs to groups: [[ResourceGroup{groupName='moudle-controller', position=0, controller=com.thinvent.basicpf.controller.MoudleController}]] 
+2018-06-06 10:37:54.211  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getByLevel was moudle-controller
+2018-06-06 10:37:54.211  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getByLevel belongs to groups: [[ResourceGroup{groupName='moudle-controller', position=0, controller=com.thinvent.basicpf.controller.MoudleController}]] 
+2018-06-06 10:37:54.212  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getTreeBySign was moudle-controller
+2018-06-06 10:37:54.213  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getTreeBySign belongs to groups: [[ResourceGroup{groupName='moudle-controller', position=0, controller=com.thinvent.basicpf.controller.MoudleController}]] 
+2018-06-06 10:37:54.216  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getMoudleTree was moudle-controller
+2018-06-06 10:37:54.216  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getMoudleTree belongs to groups: [[ResourceGroup{groupName='moudle-controller', position=0, controller=com.thinvent.basicpf.controller.MoudleController}]] 
+2018-06-06 10:37:54.216  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /moudle/moudle-controller Description: moudle-controller Position: 0
+2018-06-06 10:37:54.218  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.218  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2018-06-06 10:37:54.218  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.218  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2018-06-06 10:37:54.218  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /moudle/getAll.com.thinvent.basicpf.controller.MoudleController.getAll.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.218  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /moudle/getAll.com.thinvent.basicpf.controller.MoudleController.getAll.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.219  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getAll was moudle-controller
+2018-06-06 10:37:54.220  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getAll was moudle-controller
+2018-06-06 10:37:54.222  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.222  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2018-06-06 10:37:54.222  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.222  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2018-06-06 10:37:54.222  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /moudle/getMoudleByLevel.com.thinvent.basicpf.controller.MoudleController.getByLevel.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.222  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /moudle/getMoudleByLevel.com.thinvent.basicpf.controller.MoudleController.getByLevel.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.225  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getByLevel was moudle-controller
+2018-06-06 10:37:54.226  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getByLevel was moudle-controller
+2018-06-06 10:37:54.229  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2018-06-06 10:37:54.229  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.String(true)
+2018-06-06 10:37:54.229  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2018-06-06 10:37:54.229  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2018-06-06 10:37:54.230  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /moudle/getForbidList.com.thinvent.basicpf.controller.MoudleController.getForbidList.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.230  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /moudle/getForbidList.com.thinvent.basicpf.controller.MoudleController.getForbidList.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.231  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getForbidList was moudle-controller
+2018-06-06 10:37:54.232  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getForbidList was moudle-controller
+2018-06-06 10:37:54.234  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<java.util.Map>(true)
+2018-06-06 10:37:54.234  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<java.util.Map>(true)
+2018-06-06 10:37:54.235  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<java.util.Map>(true)
+2018-06-06 10:37:54.235  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<java.util.Map>(true)
+2018-06-06 10:37:54.235  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /moudle/getMoudleTree.com.thinvent.basicpf.controller.MoudleController.getMoudleTree.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.235  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /moudle/getMoudleTree.com.thinvent.basicpf.controller.MoudleController.getMoudleTree.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.239  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getMoudleTree was moudle-controller
+2018-06-06 10:37:54.240  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getMoudleTree was moudle-controller
+2018-06-06 10:37:54.242  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.242  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2018-06-06 10:37:54.243  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.243  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2018-06-06 10:37:54.243  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /moudle/getMoudleTreeBySign.com.thinvent.basicpf.controller.MoudleController.getTreeBySign.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.243  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /moudle/getMoudleTreeBySign.com.thinvent.basicpf.controller.MoudleController.getTreeBySign.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.245  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getTreeBySign was moudle-controller
+2018-06-06 10:37:54.246  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getTreeBySign was moudle-controller
+2018-06-06 10:37:54.248  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-06 10:37:54.249  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method add was position-controller
+2018-06-06 10:37:54.249  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: add belongs to groups: [[ResourceGroup{groupName='position-controller', position=0, controller=com.thinvent.basicpf.controller.PositionController}]] 
+2018-06-06 10:37:54.249  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was position-controller
+2018-06-06 10:37:54.249  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: delete belongs to groups: [[ResourceGroup{groupName='position-controller', position=0, controller=com.thinvent.basicpf.controller.PositionController}]] 
+2018-06-06 10:37:54.250  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method get was position-controller
+2018-06-06 10:37:54.250  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: get belongs to groups: [[ResourceGroup{groupName='position-controller', position=0, controller=com.thinvent.basicpf.controller.PositionController}]] 
+2018-06-06 10:37:54.250  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getPosByName was position-controller
+2018-06-06 10:37:54.250  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getPosByName belongs to groups: [[ResourceGroup{groupName='position-controller', position=0, controller=com.thinvent.basicpf.controller.PositionController}]] 
+2018-06-06 10:37:54.250  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getPositionByPosNameAndPosType was position-controller
+2018-06-06 10:37:54.250  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getPositionByPosNameAndPosType belongs to groups: [[ResourceGroup{groupName='position-controller', position=0, controller=com.thinvent.basicpf.controller.PositionController}]] 
+2018-06-06 10:37:54.250  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method findOneByPosName was position-controller
+2018-06-06 10:37:54.250  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: findOneByPosName belongs to groups: [[ResourceGroup{groupName='position-controller', position=0, controller=com.thinvent.basicpf.controller.PositionController}]] 
+2018-06-06 10:37:54.251  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listAllPosition was position-controller
+2018-06-06 10:37:54.251  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: listAllPosition belongs to groups: [[ResourceGroup{groupName='position-controller', position=0, controller=com.thinvent.basicpf.controller.PositionController}]] 
+2018-06-06 10:37:54.251  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listPositionByConditions was position-controller
+2018-06-06 10:37:54.251  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: listPositionByConditions belongs to groups: [[ResourceGroup{groupName='position-controller', position=0, controller=com.thinvent.basicpf.controller.PositionController}]] 
+2018-06-06 10:37:54.252  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was position-controller
+2018-06-06 10:37:54.252  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: update belongs to groups: [[ResourceGroup{groupName='position-controller', position=0, controller=com.thinvent.basicpf.controller.PositionController}]] 
+2018-06-06 10:37:54.252  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /position/position-controller Description: position-controller Position: 0
+2018-06-06 10:37:54.254  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.PositionVO(false)
+2018-06-06 10:37:54.254  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.library.vo.PositionVO(false)
+2018-06-06 10:37:54.255  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.PositionVO(false)
+2018-06-06 10:37:54.255  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.PositionVO(false)
+2018-06-06 10:37:54.257  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.PositionVO(false)
+2018-06-06 10:37:54.257  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.library.vo.PositionVO(false)
+2018-06-06 10:37:54.257  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.PositionVO(false)
+2018-06-06 10:37:54.257  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.PositionVO(false)
+2018-06-06 10:37:54.257  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.257  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-06 10:37:54.257  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.257  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-06 10:37:54.257  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /position/addPosition.com.thinvent.basicpf.controller.PositionController.add.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.258  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /position/addPosition.com.thinvent.basicpf.controller.PositionController.add.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.260  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method add was position-controller
+2018-06-06 10:37:54.263  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method add was position-controller
+2018-06-06 10:37:54.264  INFO 2292 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_1
+2018-06-06 10:37:54.266  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.266  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-06 10:37:54.266  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.266  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-06 10:37:54.267  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /position/delPosition.com.thinvent.basicpf.controller.PositionController.delete.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.267  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /position/delPosition.com.thinvent.basicpf.controller.PositionController.delete.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.270  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was position-controller
+2018-06-06 10:37:54.272  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was position-controller
+2018-06-06 10:37:54.272  INFO 2292 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_2
+2018-06-06 10:37:54.274  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.274  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.275  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.275  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.277  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.277  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.277  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.277  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.278  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /position/getPositionByPosName.com.thinvent.basicpf.controller.PositionController.findOneByPosName.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.278  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /position/getPositionByPosName.com.thinvent.basicpf.controller.PositionController.findOneByPosName.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.280  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method findOneByPosName was position-controller
+2018-06-06 10:37:54.282  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method findOneByPosName was position-controller
+2018-06-06 10:37:54.284  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.284  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.285  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.285  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.285  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /position/getByPosId.com.thinvent.basicpf.controller.PositionController.get.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.285  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /position/getByPosId.com.thinvent.basicpf.controller.PositionController.get.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.288  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method get was position-controller
+2018-06-06 10:37:54.289  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method get was position-controller
+2018-06-06 10:37:54.290  INFO 2292 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_2
+2018-06-06 10:37:54.291  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.library.vo.PositionVO>(true)
+2018-06-06 10:37:54.291  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.thinvent.library.vo.PositionVO>(true)
+2018-06-06 10:37:54.291  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.library.vo.PositionVO>(true)
+2018-06-06 10:37:54.292  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.thinvent.library.vo.PositionVO>(true)
+2018-06-06 10:37:54.292  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.292  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.292  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.thinvent.library.vo.PositionVO>(true)
+2018-06-06 10:37:54.292  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.thinvent.library.vo.PositionVO>(true)
+2018-06-06 10:37:54.292  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.292  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.293  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /position/getPosByName.com.thinvent.basicpf.controller.PositionController.getPosByName.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.293  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /position/getPosByName.com.thinvent.basicpf.controller.PositionController.getPosByName.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.297  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getPosByName was position-controller
+2018-06-06 10:37:54.298  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getPosByName was position-controller
+2018-06-06 10:37:54.301  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.301  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.302  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.303  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.303  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /position/getPositionByPosNameAndPosType.com.thinvent.basicpf.controller.PositionController.getPositionByPosNameAndPosType.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.303  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /position/getPositionByPosNameAndPosType.com.thinvent.basicpf.controller.PositionController.getPositionByPosNameAndPosType.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.308  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getPositionByPosNameAndPosType was position-controller
+2018-06-06 10:37:54.310  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getPositionByPosNameAndPosType was position-controller
+2018-06-06 10:37:54.312  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.library.vo.PositionVO>(true)
+2018-06-06 10:37:54.312  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.thinvent.library.vo.PositionVO>(true)
+2018-06-06 10:37:54.312  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.library.vo.PositionVO>(true)
+2018-06-06 10:37:54.312  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.thinvent.library.vo.PositionVO>(true)
+2018-06-06 10:37:54.312  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.312  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.PositionVO(true)
+2018-06-06 10:37:54.313  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /position/listAllPositionDistinctByName.com.thinvent.basicpf.controller.PositionController.listAllPosition.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.313  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /position/listAllPositionDistinctByName.com.thinvent.basicpf.controller.PositionController.listAllPosition.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.314  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listAllPosition was position-controller
+2018-06-06 10:37:54.316  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listAllPosition was position-controller
+2018-06-06 10:37:54.318  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.318  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2018-06-06 10:37:54.318  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.318  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2018-06-06 10:37:54.318  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /position/listPositionByConditions.com.thinvent.basicpf.controller.PositionController.listPositionByConditions.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.318  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /position/listPositionByConditions.com.thinvent.basicpf.controller.PositionController.listPositionByConditions.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.324  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listPositionByConditions was position-controller
+2018-06-06 10:37:54.325  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listPositionByConditions was position-controller
+2018-06-06 10:37:54.327  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.PositionVO(false)
+2018-06-06 10:37:54.327  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.library.vo.PositionVO(false)
+2018-06-06 10:37:54.328  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.PositionVO(false)
+2018-06-06 10:37:54.328  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.library.vo.PositionVO(false)
+2018-06-06 10:37:54.328  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.328  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-06 10:37:54.328  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.328  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-06 10:37:54.328  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /position/updatePosition.com.thinvent.basicpf.controller.PositionController.update.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.328  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /position/updatePosition.com.thinvent.basicpf.controller.PositionController.update.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.330  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was position-controller
+2018-06-06 10:37:54.331  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was position-controller
+2018-06-06 10:37:54.332  INFO 2292 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_2
+2018-06-06 10:37:54.333  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-06 10:37:54.335  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method addRole was role-controller
+2018-06-06 10:37:54.335  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: addRole belongs to groups: [[ResourceGroup{groupName='role-controller', position=0, controller=com.thinvent.basicpf.controller.RoleController}]] 
+2018-06-06 10:37:54.335  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteRole was role-controller
+2018-06-06 10:37:54.335  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: deleteRole belongs to groups: [[ResourceGroup{groupName='role-controller', position=0, controller=com.thinvent.basicpf.controller.RoleController}]] 
+2018-06-06 10:37:54.336  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method findAllRoleByUserId was role-controller
+2018-06-06 10:37:54.336  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: findAllRoleByUserId belongs to groups: [[ResourceGroup{groupName='role-controller', position=0, controller=com.thinvent.basicpf.controller.RoleController}]] 
+2018-06-06 10:37:54.336  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method findAllRole was role-controller
+2018-06-06 10:37:54.336  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: findAllRole belongs to groups: [[ResourceGroup{groupName='role-controller', position=0, controller=com.thinvent.basicpf.controller.RoleController}]] 
+2018-06-06 10:37:54.336  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getRoleByRoleId was role-controller
+2018-06-06 10:37:54.336  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getRoleByRoleId belongs to groups: [[ResourceGroup{groupName='role-controller', position=0, controller=com.thinvent.basicpf.controller.RoleController}]] 
+2018-06-06 10:37:54.336  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method list was role-controller
+2018-06-06 10:37:54.336  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: list belongs to groups: [[ResourceGroup{groupName='role-controller', position=0, controller=com.thinvent.basicpf.controller.RoleController}]] 
+2018-06-06 10:37:54.337  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method updateRole was role-controller
+2018-06-06 10:37:54.337  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: updateRole belongs to groups: [[ResourceGroup{groupName='role-controller', position=0, controller=com.thinvent.basicpf.controller.RoleController}]] 
+2018-06-06 10:37:54.337  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /role/role-controller Description: role-controller Position: 0
+2018-06-06 10:37:54.339  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.339  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-06 10:37:54.339  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.339  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-06 10:37:54.340  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.RoleVO(false)
+2018-06-06 10:37:54.340  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.library.vo.RoleVO(false)
+2018-06-06 10:37:54.340  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.RoleVO(false)
+2018-06-06 10:37:54.340  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.RoleVO(false)
+2018-06-06 10:37:54.343  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.RoleVO(false)
+2018-06-06 10:37:54.343  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.library.vo.RoleVO(false)
+2018-06-06 10:37:54.343  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.RoleVO(false)
+2018-06-06 10:37:54.343  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.RoleVO(false)
+2018-06-06 10:37:54.343  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /role/addRole.com.thinvent.basicpf.controller.RoleController.addRole.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.344  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /role/addRole.com.thinvent.basicpf.controller.RoleController.addRole.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.346  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method addRole was role-controller
+2018-06-06 10:37:54.359  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method addRole was role-controller
+2018-06-06 10:37:54.361  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.361  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-06 10:37:54.362  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.362  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-06 10:37:54.363  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /role/deleteRole.com.thinvent.basicpf.controller.RoleController.deleteRole.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.363  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /role/deleteRole.com.thinvent.basicpf.controller.RoleController.deleteRole.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.365  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteRole was role-controller
+2018-06-06 10:37:54.367  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteRole was role-controller
+2018-06-06 10:37:54.369  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List(true)
+2018-06-06 10:37:54.369  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List(true)
+2018-06-06 10:37:54.369  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List(true)
+2018-06-06 10:37:54.369  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List(true)
+2018-06-06 10:37:54.369  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List(true)
+2018-06-06 10:37:54.370  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List(true)
+2018-06-06 10:37:54.370  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /role/findAllRole.com.thinvent.basicpf.controller.RoleController.findAllRole.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.370  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /role/findAllRole.com.thinvent.basicpf.controller.RoleController.findAllRole.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.372  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method findAllRole was role-controller
+2018-06-06 10:37:54.373  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method findAllRole was role-controller
+2018-06-06 10:37:54.374  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.library.vo.RoleVO>(true)
+2018-06-06 10:37:54.375  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.thinvent.library.vo.RoleVO>(true)
+2018-06-06 10:37:54.375  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.library.vo.RoleVO>(true)
+2018-06-06 10:37:54.375  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.thinvent.library.vo.RoleVO>(true)
+2018-06-06 10:37:54.375  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.RoleVO(true)
+2018-06-06 10:37:54.375  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.RoleVO(true)
+2018-06-06 10:37:54.379  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.thinvent.library.vo.RoleVO>(true)
+2018-06-06 10:37:54.379  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.thinvent.library.vo.RoleVO>(true)
+2018-06-06 10:37:54.379  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.RoleVO(true)
+2018-06-06 10:37:54.379  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.RoleVO(true)
+2018-06-06 10:37:54.380  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /role/findAllRoleByUserId.com.thinvent.basicpf.controller.RoleController.findAllRoleByUserId.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.380  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /role/findAllRoleByUserId.com.thinvent.basicpf.controller.RoleController.findAllRoleByUserId.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.383  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method findAllRoleByUserId was role-controller
+2018-06-06 10:37:54.391  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method findAllRoleByUserId was role-controller
+2018-06-06 10:37:54.394  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.394  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2018-06-06 10:37:54.394  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.394  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2018-06-06 10:37:54.395  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /role/getRoleByRoleId.com.thinvent.basicpf.controller.RoleController.getRoleByRoleId.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.395  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /role/getRoleByRoleId.com.thinvent.basicpf.controller.RoleController.getRoleByRoleId.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.397  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getRoleByRoleId was role-controller
+2018-06-06 10:37:54.398  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getRoleByRoleId was role-controller
+2018-06-06 10:37:54.400  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.401  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2018-06-06 10:37:54.401  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.401  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2018-06-06 10:37:54.401  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /role/getRoleList.com.thinvent.basicpf.controller.RoleController.list.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.401  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /role/getRoleList.com.thinvent.basicpf.controller.RoleController.list.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.407  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method list was role-controller
+2018-06-06 10:37:54.410  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method list was role-controller
+2018-06-06 10:37:54.412  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.412  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-06 10:37:54.412  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.412  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-06 10:37:54.412  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.RoleVO(false)
+2018-06-06 10:37:54.413  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.library.vo.RoleVO(false)
+2018-06-06 10:37:54.413  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.RoleVO(false)
+2018-06-06 10:37:54.413  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.library.vo.RoleVO(false)
+2018-06-06 10:37:54.413  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /role/updateRole.com.thinvent.basicpf.controller.RoleController.updateRole.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.414  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /role/updateRole.com.thinvent.basicpf.controller.RoleController.updateRole.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.417  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method updateRole was role-controller
+2018-06-06 10:37:54.418  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method updateRole was role-controller
+2018-06-06 10:37:54.420  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-06 10:37:54.422  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getList was role-moudle-controller
+2018-06-06 10:37:54.422  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getList belongs to groups: [[ResourceGroup{groupName='role-moudle-controller', position=0, controller=com.thinvent.basicpf.controller.RoleMoudleController}]] 
+2018-06-06 10:37:54.423  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method save was role-moudle-controller
+2018-06-06 10:37:54.423  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: save belongs to groups: [[ResourceGroup{groupName='role-moudle-controller', position=0, controller=com.thinvent.basicpf.controller.RoleMoudleController}]] 
+2018-06-06 10:37:54.424  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /rolemoudle/role-moudle-controller Description: role-moudle-controller Position: 0
+2018-06-06 10:37:54.425  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.basicpf.model.RoleMoudle(true)
+2018-06-06 10:37:54.425  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.basicpf.model.RoleMoudle(true)
+2018-06-06 10:37:54.425  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.basicpf.model.RoleMoudle(true)
+2018-06-06 10:37:54.425  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.basicpf.model.RoleMoudle(true)
+2018-06-06 10:37:54.428  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.basicpf.model.RoleMoudle(true)
+2018-06-06 10:37:54.428  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.basicpf.model.RoleMoudle(true)
+2018-06-06 10:37:54.429  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.basicpf.model.RoleMoudle(true)
+2018-06-06 10:37:54.429  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.basicpf.model.RoleMoudle(true)
+2018-06-06 10:37:54.429  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.basicpf.model.RoleMoudle>(true)
+2018-06-06 10:37:54.429  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.thinvent.basicpf.model.RoleMoudle>(true)
+2018-06-06 10:37:54.429  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.basicpf.model.RoleMoudle>(true)
+2018-06-06 10:37:54.429  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.thinvent.basicpf.model.RoleMoudle>(true)
+2018-06-06 10:37:54.430  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.basicpf.model.RoleMoudle(true)
+2018-06-06 10:37:54.430  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.basicpf.model.RoleMoudle(true)
+2018-06-06 10:37:54.430  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.thinvent.basicpf.model.RoleMoudle>(true)
+2018-06-06 10:37:54.430  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.thinvent.basicpf.model.RoleMoudle>(true)
+2018-06-06 10:37:54.430  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.basicpf.model.RoleMoudle(true)
+2018-06-06 10:37:54.430  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.basicpf.model.RoleMoudle(true)
+2018-06-06 10:37:54.431  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /roleMoudle/getListByRoleId.com.thinvent.basicpf.controller.RoleMoudleController.getList.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.432  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /roleMoudle/getListByRoleId.com.thinvent.basicpf.controller.RoleMoudleController.getList.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.433  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getList was role-moudle-controller
+2018-06-06 10:37:54.434  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getList was role-moudle-controller
+2018-06-06 10:37:54.435  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2018-06-06 10:37:54.435  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.String(true)
+2018-06-06 10:37:54.435  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2018-06-06 10:37:54.435  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2018-06-06 10:37:54.435  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /roleMoudle/save.com.thinvent.basicpf.controller.RoleMoudleController.save.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.436  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /roleMoudle/save.com.thinvent.basicpf.controller.RoleMoudleController.save.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.437  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method save was role-moudle-controller
+2018-06-06 10:37:54.438  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method save was role-moudle-controller
+2018-06-06 10:37:54.439  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-06-06 10:37:54.441  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteUser was user-controller
+2018-06-06 10:37:54.441  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: deleteUser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.thinvent.basicpf.controller.UserController}]] 
+2018-06-06 10:37:54.441  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method findUserByLoginName was user-controller
+2018-06-06 10:37:54.442  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: findUserByLoginName belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.thinvent.basicpf.controller.UserController}]] 
+2018-06-06 10:37:54.442  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method findUserByUserId was user-controller
+2018-06-06 10:37:54.442  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: findUserByUserId belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.thinvent.basicpf.controller.UserController}]] 
+2018-06-06 10:37:54.442  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getUsersByDepId was user-controller
+2018-06-06 10:37:54.442  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getUsersByDepId belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.thinvent.basicpf.controller.UserController}]] 
+2018-06-06 10:37:54.442  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listAllUser was user-controller
+2018-06-06 10:37:54.442  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: listAllUser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.thinvent.basicpf.controller.UserController}]] 
+2018-06-06 10:37:54.447  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listUserByConditions was user-controller
+2018-06-06 10:37:54.447  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: listUserByConditions belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.thinvent.basicpf.controller.UserController}]] 
+2018-06-06 10:37:54.447  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method saveUserList was user-controller
+2018-06-06 10:37:54.447  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: saveUserList belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.thinvent.basicpf.controller.UserController}]] 
+2018-06-06 10:37:54.448  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method saveUser was user-controller
+2018-06-06 10:37:54.448  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: saveUser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.thinvent.basicpf.controller.UserController}]] 
+2018-06-06 10:37:54.448  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method updateUserAllInfo was user-controller
+2018-06-06 10:37:54.448  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: updateUserAllInfo belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.thinvent.basicpf.controller.UserController}]] 
+2018-06-06 10:37:54.448  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method updateUser was user-controller
+2018-06-06 10:37:54.448  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: updateUser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.thinvent.basicpf.controller.UserController}]] 
+2018-06-06 10:37:54.449  INFO 2292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /user/user-controller Description: user-controller Position: 0
+2018-06-06 10:37:54.451  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.451  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-06 10:37:54.451  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.451  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-06 10:37:54.451  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/deleteUser.com.thinvent.basicpf.controller.UserController.deleteUser.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.451  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/deleteUser.com.thinvent.basicpf.controller.UserController.deleteUser.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.453  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteUser was user-controller
+2018-06-06 10:37:54.455  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteUser was user-controller
+2018-06-06 10:37:54.457  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.457  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2018-06-06 10:37:54.457  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.457  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2018-06-06 10:37:54.457  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/getUserByLoginName.com.thinvent.basicpf.controller.UserController.findUserByLoginName.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.457  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/getUserByLoginName.com.thinvent.basicpf.controller.UserController.findUserByLoginName.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.459  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method findUserByLoginName was user-controller
+2018-06-06 10:37:54.461  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method findUserByLoginName was user-controller
+2018-06-06 10:37:54.464  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.464  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2018-06-06 10:37:54.475  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.475  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2018-06-06 10:37:54.476  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/getUserByUserId.com.thinvent.basicpf.controller.UserController.findUserByUserId.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.476  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/getUserByUserId.com.thinvent.basicpf.controller.UserController.findUserByUserId.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.478  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method findUserByUserId was user-controller
+2018-06-06 10:37:54.482  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method findUserByUserId was user-controller
+2018-06-06 10:37:54.486  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.library.vo.UserVO>(true)
+2018-06-06 10:37:54.486  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.thinvent.library.vo.UserVO>(true)
+2018-06-06 10:37:54.486  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.library.vo.UserVO>(true)
+2018-06-06 10:37:54.486  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.thinvent.library.vo.UserVO>(true)
+2018-06-06 10:37:54.486  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.UserVO(true)
+2018-06-06 10:37:54.486  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.UserVO(true)
+2018-06-06 10:37:54.514  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.thinvent.library.vo.UserVO>(true)
+2018-06-06 10:37:54.514  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.thinvent.library.vo.UserVO>(true)
+2018-06-06 10:37:54.551  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.UserVO(true)
+2018-06-06 10:37:54.552  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.UserVO(true)
+2018-06-06 10:37:54.552  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/getUsersByDepId.com.thinvent.basicpf.controller.UserController.getUsersByDepId.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.552  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/getUsersByDepId.com.thinvent.basicpf.controller.UserController.getUsersByDepId.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.557  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getUsersByDepId was user-controller
+2018-06-06 10:37:54.559  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getUsersByDepId was user-controller
+2018-06-06 10:37:54.561  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.561  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2018-06-06 10:37:54.572  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.572  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2018-06-06 10:37:54.573  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/listAllUser.com.thinvent.basicpf.controller.UserController.listAllUser.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.573  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/listAllUser.com.thinvent.basicpf.controller.UserController.listAllUser.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.574  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listAllUser was user-controller
+2018-06-06 10:37:54.576  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listAllUser was user-controller
+2018-06-06 10:37:54.578  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.578  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2018-06-06 10:37:54.578  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2018-06-06 10:37:54.578  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2018-06-06 10:37:54.579  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/listUserByConditions.com.thinvent.basicpf.controller.UserController.listUserByConditions.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.579  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/listUserByConditions.com.thinvent.basicpf.controller.UserController.listUserByConditions.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.592  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listUserByConditions was user-controller
+2018-06-06 10:37:54.594  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listUserByConditions was user-controller
+2018-06-06 10:37:54.596  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.596  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.597  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.597  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.621  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.621  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.621  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.621  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.624  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.624  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-06 10:37:54.626  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.626  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-06 10:37:54.627  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/saveUser.com.thinvent.basicpf.controller.UserController.saveUser.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.627  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/saveUser.com.thinvent.basicpf.controller.UserController.saveUser.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.631  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method saveUser was user-controller
+2018-06-06 10:37:54.632  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method saveUser was user-controller
+2018-06-06 10:37:54.650  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.651  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-06 10:37:54.651  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.651  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-06 10:37:54.651  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.library.vo.UserVO>(false)
+2018-06-06 10:37:54.651  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.thinvent.library.vo.UserVO>(false)
+2018-06-06 10:37:54.651  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.thinvent.library.vo.UserVO>(false)
+2018-06-06 10:37:54.651  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.thinvent.library.vo.UserVO>(false)
+2018-06-06 10:37:54.652  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.652  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.652  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.thinvent.library.vo.UserVO>(false)
+2018-06-06 10:37:54.652  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.thinvent.library.vo.UserVO>(false)
+2018-06-06 10:37:54.656  INFO 2292 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.656  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.657  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/saveUserList.com.thinvent.basicpf.controller.UserController.saveUserList.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.657  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/saveUserList.com.thinvent.basicpf.controller.UserController.saveUserList.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.660  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method saveUserList was user-controller
+2018-06-06 10:37:54.662  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method saveUserList was user-controller
+2018-06-06 10:37:54.665  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.666  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.666  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.666  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.666  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.666  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-06 10:37:54.667  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.667  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-06 10:37:54.667  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/updateUser.com.thinvent.basicpf.controller.UserController.updateUser.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.667  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/updateUser.com.thinvent.basicpf.controller.UserController.updateUser.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.670  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method updateUser was user-controller
+2018-06-06 10:37:54.672  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method updateUser was user-controller
+2018-06-06 10:37:54.674  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.674  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.674  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.674  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.thinvent.library.vo.UserVO(false)
+2018-06-06 10:37:54.674  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.675  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-06-06 10:37:54.675  INFO 2292 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-06-06 10:37:54.675  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-06-06 10:37:54.675  INFO 2292 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/updateUserAllInfo.com.thinvent.basicpf.controller.UserController.updateUserAllInfo.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.675  INFO 2292 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/updateUserAllInfo.com.thinvent.basicpf.controller.UserController.updateUserAllInfo.CodeGenGenericTypeNamingStrategy
+2018-06-06 10:37:54.677  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method updateUserAllInfo was user-controller
+2018-06-06 10:37:54.678  INFO 2292 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method updateUserAllInfo was user-controller
+2018-06-06 10:37:54.691  INFO 2292 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-9001"]
+2018-06-06 10:37:54.731  INFO 2292 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-9001"]
+2018-06-06 10:37:54.790  INFO 2292 --- [main] o.a.tomcat.util.net.NioSelectorPool      : Using a shared selector for servlet write/read
+2018-06-06 10:37:54.850  INFO 2292 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9001 (http)
+2018-06-06 10:37:54.860  INFO 2292 --- [main] com.thinvent.basicpf.MainApplication     : Started MainApplication in 61.567 seconds (JVM running for 64.818)
+2018-06-06 10:42:50.182  INFO 2292 --- [http-nio-9001-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-06 10:42:50.182  INFO 2292 --- [http-nio-9001-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-06-06 10:42:50.223  INFO 2292 --- [http-nio-9001-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 41 ms

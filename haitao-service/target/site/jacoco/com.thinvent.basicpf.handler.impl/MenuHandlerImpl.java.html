@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MenuHandlerImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">zhhd-service</a> &gt; <a href="index.source.html" class="el_package">com.thinvent.basicpf.handler.impl</a> &gt; <span class="el_source">MenuHandlerImpl.java</span></div><h1>MenuHandlerImpl.java</h1><pre class="source lang-java linenums">package com.thinvent.basicpf.handler.impl;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.thinvent.basicpf.dao.IMenuDao;
+import com.thinvent.basicpf.handler.IMenuHandler;
+import com.thinvent.basicpf.model.Moudle;
+import com.thinvent.basicpf.util.ModuleUtil;
+import com.thinvent.basicpf.util.MoudleVerifyUtil;
+import com.thinvent.library.Constants;
+import com.thinvent.library.exception.ThinventBaseException;
+import com.thinvent.library.vo.MoudleVO;
+
+@Service
+@Transactional(isolation = Isolation.READ_COMMITTED)
+<span class="nc" id="L26">public class MenuHandlerImpl implements IMenuHandler {</span>
+
+    @Autowired
+    private IMenuDao menuDao;
+
+	@Autowired
+	private ModuleUtil moduleUtil;
+	
+	// 查找所有模块
+	@Override
+    public List&lt;Moudle&gt; menuAll() {
+<span class="nc" id="L37">		List&lt;String&gt; moudleTypes = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L38">		moudleTypes.add(&quot;1&quot;);</span>
+<span class="nc" id="L39">		moudleTypes.add(&quot;2&quot;);</span>
+<span class="nc" id="L40">        return this.menuDao.findByEnableAndMoudleTypeIn(1, moudleTypes);</span>
+    }
+
+	// 获取菜单列表
+	@Override
+	public Object menuList(String moudelName, int pageIndex, int pageSize) {
+<span class="nc" id="L46">		PageRequest pageRequest = new PageRequest(pageIndex-1, pageSize);</span>
+<span class="nc" id="L47">		return this.menuDao.queryByMoudleNameLikeAndMoudleTypeAndEnable(&quot;%&quot; + moudelName + &quot;%&quot;, &quot;2&quot;, 1, pageRequest);</span>
+	}
+
+	// 删除菜单
+	@Override
+	public void menuDel(String moudleId) throws ThinventBaseException {
+<span class="nc" id="L53">		List&lt;Moudle&gt; list = menuDao.findByMoudleParentIdAndEnable(moudleId, 1);</span>
+<span class="nc" id="L54">		Moudle moudle = menuDao.findByMoudleIdAndEnable(moudleId, 1);</span>
+<span class="nc" id="L55">		MoudleVerifyUtil.verifyListChilds(list);</span>
+<span class="nc" id="L56">		moudle.setEnable(0);</span>
+<span class="nc" id="L57">		menuDao.save(moudle);</span>
+<span class="nc" id="L58">		moduleUtil.clearRoleModule(moudleId);</span>
+<span class="nc" id="L59">	}</span>
+    
+    // 保存菜单
+    @Override
+    public String menuAdd(MoudleVO moudleVO) throws ThinventBaseException{
+<span class="nc" id="L64">    	Moudle moudleExist = menuDao.findByMoudleNameAndEnable(moudleVO.getMoudleName(), 1);</span>
+<span class="nc" id="L65">    	MoudleVerifyUtil.verifyMoudleRepeat(moudleExist);</span>
+<span class="nc" id="L66">    	Moudle moudle = new Moudle();</span>
+<span class="nc" id="L67">    	Moudle moudleParent = this.menuDao.findByMoudleIdAndEnable(moudleVO.getMoudleParentId(), 1);</span>
+<span class="nc" id="L68">    	MoudleVerifyUtil.verifyMoudleParent(moudleParent);</span>
+<span class="nc" id="L69">    	BeanUtils.copyProperties(moudleVO, moudle);</span>
+<span class="nc" id="L70">    	String moudleId = findMaxMenuId();</span>
+<span class="nc" id="L71">    	moudle.setMoudleId(moudleId);</span>
+<span class="nc bnc" id="L72" title="All 2 branches missed.">    	moudle.setMoudleSign((moudleParent.getMoudleSign()==null?&quot;&quot;:moudleParent.getMoudleSign())+moudleParent.getMoudleId()+&quot;-&quot;);</span>
+<span class="nc" id="L73">    	moudle.setMoudleLevel(String.valueOf(Integer.parseInt(moudleParent.getMoudleLevel())+1));</span>
+<span class="nc" id="L74">    	moudle.setMoudleType(&quot;2&quot;);</span>
+<span class="nc" id="L75">    	this.menuDao.save(moudle);</span>
+<span class="nc" id="L76">    	moudleVO.setMoudleId(moudleId);</span>
+<span class="nc" id="L77">    	moduleUtil.initRoleModule(moudleVO);</span>
+<span class="nc" id="L78">    	return Constants.RES_SUCCESS;</span>
+    }
+    
+	// 查找模块数量
+    @Override
+    public String findMaxMenuId(){
+<span class="nc" id="L84">    	List&lt;Moudle&gt; moudleList = this.menuDao.findAll();</span>
+<span class="nc" id="L85">    	int max = 0;</span>
+<span class="nc bnc" id="L86" title="All 4 branches missed.">    	if(moudleList!=null&amp;&amp;!moudleList.isEmpty())</span>
+<span class="nc bnc" id="L87" title="All 2 branches missed.">	    	for(Moudle moudle:moudleList){</span>
+<span class="nc" id="L88">	    		int moudleId = Integer.parseInt(moudle.getMoudleId());</span>
+<span class="nc bnc" id="L89" title="All 2 branches missed.">	    		if(moudleId&gt;max)</span>
+<span class="nc" id="L90">	    			max = moudleId;</span>
+	    	}
+<span class="nc" id="L92">    	return String.valueOf(max+1);</span>
+    }
+    
+    // 获取单个菜单
+    @Override
+    public Moudle menuOne(String moudleId) {
+<span class="nc" id="L98">    	return this.menuDao.findByMoudleIdAndEnable(moudleId, 1);</span>
+	}
+    
+    // 更新菜单
+    @Override
+	public Map&lt;String, String&gt; menuUpdate(MoudleVO moudleVO) throws ThinventBaseException{
+<span class="nc" id="L104">    	Moudle moudle = this.menuDao.findByMoudleIdAndEnable(moudleVO.getMoudleId(), 1);</span>
+<span class="nc" id="L105">    	MoudleVerifyUtil.verifyMoudle(moudle);</span>
+<span class="nc" id="L106">    	String oldSign = moudle.getMoudleSign();</span>
+<span class="nc" id="L107">    	int oldLevel = Integer.parseInt(moudle.getMoudleLevel());</span>
+<span class="nc" id="L108">    	Map&lt;String, String&gt; map = new HashMap&lt;&gt;();</span>
+    	//如果父级部门没有改变
+<span class="nc bnc" id="L110" title="All 2 branches missed.">    	if(moudle.getMoudleParentId().equals(moudleVO.getMoudleParentId())){</span>
+<span class="nc" id="L111">    		BeanUtils.copyProperties(moudleVO, moudle);</span>
+<span class="nc" id="L112">    		this.menuDao.save(moudle);</span>
+<span class="nc" id="L113">    		map.put(&quot;status&quot;, Constants.RES_SUCCESS);</span>
+<span class="nc" id="L114">    		map.put(&quot;msg&quot;, &quot;修改菜单成功&quot;);</span>
+<span class="nc" id="L115">    	}else{</span>
+    		//检验父级菜单是否存在
+<span class="nc" id="L117">    		Moudle moudleParent = this.menuDao.findByMoudleIdAndEnable(moudleVO.getMoudleParentId(), 1);</span>
+<span class="nc" id="L118">    		MoudleVerifyUtil.verifyMoudleParent(moudleParent);</span>
+    		//更改自己的sign
+<span class="nc" id="L120">    		moudleVO.setMoudleSign(moudleParent.getMoudleSign()+moudleParent.getMoudleId()+&quot;-&quot;);</span>
+<span class="nc" id="L121">    		String newSign = moudleVO.getMoudleSign();</span>
+<span class="nc" id="L122">    		int newLevel = Integer.parseInt(moudleParent.getMoudleLevel())+1;</span>
+<span class="nc" id="L123">    		moudleVO.setMoudleLevel(String.valueOf(newLevel));</span>
+<span class="nc" id="L124">    		BeanUtils.copyProperties(moudleVO, moudle);</span>
+<span class="nc" id="L125">    		this.menuDao.save(moudle);</span>
+    		//查询所有子节点
+<span class="nc" id="L127">    		List&lt;Moudle&gt; moudleList = this.menuDao.findByMoudleSignLikeAndEnable(oldSign+moudle.getMoudleId()+&quot;-&quot; + &quot;%&quot;, 1);</span>
+    		//更改所有子节点
+<span class="nc bnc" id="L129" title="All 6 branches missed.">    		if(moudleList!=null&amp;&amp;!moudleList.isEmpty()&amp;&amp;oldSign.length()&gt;0){</span>
+<span class="nc bnc" id="L130" title="All 2 branches missed.">    			for(Moudle childMoudle:moudleList){</span>
+<span class="nc" id="L131">    				String sign = childMoudle.getMoudleSign().replaceAll(oldSign, newSign);</span>
+<span class="nc" id="L132">    				childMoudle.setMoudleSign(sign);</span>
+<span class="nc" id="L133">    				int level = Integer.valueOf(childMoudle.getMoudleLevel()) + newLevel - oldLevel;</span>
+<span class="nc" id="L134">    				childMoudle.setMoudleLevel(String.valueOf(level));</span>
+<span class="nc" id="L135">    				this.menuDao.save(childMoudle);</span>
+    			}
+    		}
+<span class="nc" id="L138">    		map.put(&quot;status&quot;, Constants.RES_SUCCESS);</span>
+<span class="nc" id="L139">    		map.put(&quot;msg&quot;, &quot;修改菜单成功&quot;);</span>
+    	}
+<span class="nc" id="L141">    	return map;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>

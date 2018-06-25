@@ -1,0 +1,46 @@
+
+{
+	"zhhd-config":{
+		"scripts":"/scripts/Map/api/api.arcgis.config.js, http://192.168.65.74:9005/3.13/init.js, /scripts/Map/layer/layer.google.china.js, /scripts/Map/convert/convert.coordinate.js",
+		"styles":"http://192.168.65.74:9005/3.13/dijit/themes/tundra/tundra.css, http://192.168.65.74:9005/3.13/dijit/themes/claro/claro.css, http://192.168.65.74:9005/3.13/esri/css/esri.css",
+		"user":{
+			"defaultPassword":"1"
+		},
+		"web":{
+			"fileUrlHost":"http://192.168.65.74:8092",
+			"videoUrlHost":"http://192.168.65.74:8090",
+			"photoUrlHost":"http://192.168.65.74:8090",
+			"shipInPortTrackTimeQuantum":"48",
+			"shipCruiseTrackTimeQuantum":"48",
+			"aisInterval":"30"
+		},
+		"session":{
+			"timedelay":"true",
+			"timeout":"1800"
+		},
+		"MQ":{
+			"Host":"192.168.65.74",
+			"Port":"5672",
+			"UserName":"sa",
+			"Password":"P@ssw0rd",
+			"ExchangeName":"SHJS_Service_Exchange"
+		},
+		"FTP":{
+			"Host":"192.168.65.74",
+			"Port":"8091",
+			"UserName":"jsftp",
+			"Password":"Passw0rd"
+		},
+		"TCP":{
+			"Host":"192.168.65.74",
+			"Port":"9100"
+		},
+		"IDmapGUID":{
+			"1026":"5a342021-ecfe-9867-2de3-f3777a2f9d2c"
+		},
+		"reportUrl":{
+			"url":"/home/suser/zhhd-js/zhhd-config/report/"
+		}
+	},
+	"messageServiceUrl": "http://127.0.0.1:8091/"
+}

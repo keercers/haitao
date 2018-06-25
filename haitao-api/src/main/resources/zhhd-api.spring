@@ -1,0 +1,29 @@
+{
+	"spring": {
+		"application": {
+			"name": "zhhd-api"
+		},
+		"profiles": {
+			"active": "dev"
+		},
+		"jackson": {
+			"date-format": "yyyy-MM-dd HH:mm:ss",
+      		"time-zone": "GMT+8"
+		},
+		"datasource": {
+			"driver-class-name":"oracle.jdbc.driver.OracleDriver",
+			"url":"jdbc:oracle:thin:@192.168.65.90:1521/SHJS_DB",
+			"username":"SHJSUSR",
+			"password": "SHJSUSR"
+		},
+		"jpa": {
+			"show-sql": true,
+			"hibernate": {
+				"ddl-auto": "update",
+				"naming": {
+					"strategy": "org.hibernate.cfg.ImprovedNamingStrategy"
+				}
+			}
+		}
+	}
+}

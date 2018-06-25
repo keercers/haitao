@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserHandlerImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">zhhd-service</a> &gt; <a href="index.source.html" class="el_package">com.thinvent.basicpf.handler.impl</a> &gt; <span class="el_source">UserHandlerImpl.java</span></div><h1>UserHandlerImpl.java</h1><pre class="source lang-java linenums">package com.thinvent.basicpf.handler.impl;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import org.omg.CORBA.UserException;
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.thinvent.basicpf.dao.IUserDao;
+import com.thinvent.basicpf.dao.IUserRoleDao;
+import com.thinvent.basicpf.dao.jpa.UserDaoRepositoryImpl;
+import com.thinvent.basicpf.handler.IUserHandler;
+import com.thinvent.basicpf.model.User;
+import com.thinvent.basicpf.model.UserRole;
+import com.thinvent.basicpf.util.UserVerifyUtil;
+import com.thinvent.library.exception.ThinventBaseException;
+import com.thinvent.library.vo.UserRoleVO;
+import com.thinvent.library.vo.UserVO;
+
+@Service
+@Transactional(isolation=Isolation.READ_COMMITTED)
+<span class="nc" id="L31">public class UserHandlerImpl implements IUserHandler {</span>
+	
+<span class="nc" id="L33">	private static final String USERLIST = new String(&quot;userList&quot;).intern();</span>
+	
+	@Autowired
+	private IUserDao userDao;
+	
+	@Autowired
+	private IUserRoleDao userRoleDao;
+	
+	@Autowired
+	private UserDaoRepositoryImpl userDaoRepository;
+	
+	@Override
+	public List&lt;UserVO&gt; getUsersByDepId(String depId) throws ThinventBaseException {
+<span class="nc" id="L46">		List&lt;User&gt; list = this.userDao.findByDepIdAndEnable(depId, 1);</span>
+<span class="nc" id="L47">	    return list.stream().map(User::convertToUserVO).collect(Collectors.toList());</span>
+	}
+	
+	@Override
+	public UserVO findUser(String loginName) throws ThinventBaseException {
+<span class="nc" id="L52">		User user = this.userDao.findUser(loginName);</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">		if(user == null) {</span>
+<span class="nc" id="L54">			return null;</span>
+		}
+<span class="nc" id="L56">		UserVO userVO = new UserVO();</span>
+<span class="nc" id="L57">		BeanUtils.copyProperties(user, userVO);</span>
+<span class="nc" id="L58">		return userVO;</span>
+	}
+
+	/**
+	 * 获取部分信息
+	 * @throws UserException 
+	 */
+	@Override
+	public UserVO findUserByUserId(String userId) throws ThinventBaseException {
+<span class="nc" id="L67">		User user = this.userDao.findUserByUserId(userId);</span>
+<span class="nc" id="L68">		UserVerifyUtil.verifyUser(user);</span>
+<span class="nc" id="L69">		UserVO userVO = new UserVO();</span>
+<span class="nc" id="L70">		BeanUtils.copyProperties(user, userVO);</span>
+<span class="nc" id="L71">		return userVO;</span>
+	}
+
+	@Override
+	public void save(UserVO userVO) {
+<span class="nc" id="L76">		userVO.setCreateTime(new Date());</span>
+<span class="nc" id="L77">		User user = new User();</span>
+		//属性复制，将userVO的属性复制给user
+<span class="nc" id="L79">		BeanUtils.copyProperties(userVO, user);</span>
+<span class="nc" id="L80">		this.userDao.save(user);</span>
+		//解析为LinkedHashMap，需转换
+<span class="nc" id="L82">		List&lt;Map&lt;String, Object&gt;&gt; userRoleVOList = userVO.getUserRoleList();</span>
+<span class="nc bnc" id="L83" title="All 2 branches missed.">		if(userRoleVOList != null) {</span>
+<span class="nc bnc" id="L84" title="All 2 branches missed.">			for (Map entry : userRoleVOList) {</span>
+<span class="nc" id="L85">				UserRole userRole = new UserRole();</span>
+<span class="nc" id="L86">				UserRoleVO ur = new UserRoleVO();</span>
+<span class="nc" id="L87">				ur.setRoleId((String) entry.get(&quot;roleId&quot;));</span>
+<span class="nc" id="L88">				ur.setCreateUser(userVO.getCreateUser());</span>
+<span class="nc" id="L89">				ur.setUserId(userVO.getUserId());</span>
+<span class="nc" id="L90">				BeanUtils.copyProperties(ur, userRole);</span>
+<span class="nc" id="L91">				this.userRoleDao.save(userRole);</span>
+			}
+		}
+<span class="nc" id="L94">	}</span>
+	
+	@Override
+	public void deleteUser(String userId) throws ThinventBaseException {
+<span class="nc" id="L98">		User user = this.userDao.findUserByUserId(userId);</span>
+<span class="nc" id="L99">		UserVerifyUtil.verifyUser(user);</span>
+<span class="nc" id="L100">		user.setEnable(0);</span>
+<span class="nc" id="L101">		userDao.save(user);</span>
+<span class="nc" id="L102">		List&lt;UserRole&gt; userRoleList = this.userRoleDao.getUserRoleByUserId(userId);</span>
+<span class="nc bnc" id="L103" title="All 2 branches missed.">		for(UserRole ur : userRoleList) {</span>
+<span class="nc" id="L104">			ur.setEnable(0);</span>
+<span class="nc" id="L105">			userRoleDao.save(ur);</span>
+		}
+<span class="nc" id="L107">	}</span>
+	
+	/**
+	 * 仅修改 user 表的数据，修改其它表 使用 updateUserAllInfo 方法
+	 */
+	@Override
+	public void updateUser(UserVO userVO) throws ThinventBaseException {
+<span class="nc" id="L114">		userVO.setUpdateTime(new Date());</span>
+<span class="nc" id="L115">		User user = this.userDao.findUserByUserId(userVO.getUserId());</span>
+<span class="nc" id="L116">		UserVerifyUtil.verifyUser(user);</span>
+<span class="nc" id="L117">		BeanUtils.copyProperties(userVO, user);</span>
+		
+<span class="nc" id="L119">		this.userDao.save(user);</span>
+<span class="nc" id="L120">	}</span>
+	
+	@Override
+	public void updateUserAllInfo(UserVO userVO) throws ThinventBaseException {
+<span class="nc" id="L124">		userVO.setUpdateTime(new Date());</span>
+<span class="nc" id="L125">		User user = this.userDao.findUserByUserId(userVO.getUserId());</span>
+<span class="nc" id="L126">		BeanUtils.copyProperties(userVO, user, &quot;id&quot;);</span>
+		
+<span class="nc" id="L128">		List&lt;UserRole&gt; userRoleList = this.userRoleDao.getUserRoleByUserId(userVO.getUserId());</span>
+<span class="nc" id="L129">		List&lt;UserRole&gt; userRoleListTmp = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L130">		List&lt;Map&lt;String, Object&gt;&gt; userRoleVOList = userVO.getUserRoleList();</span>
+<span class="nc" id="L131">		List&lt;String&gt; curUserRoleIds = new ArrayList&lt;&gt;();</span>
+		
+<span class="nc bnc" id="L133" title="All 2 branches missed.">		if(userRoleVOList != null) {</span>
+<span class="nc bnc" id="L134" title="All 2 branches missed.">			for (Map entry : userRoleVOList) {</span>
+<span class="nc" id="L135">				UserRole userRole = new UserRole();</span>
+<span class="nc" id="L136">				UserRoleVO ur = new UserRoleVO();</span>
+<span class="nc" id="L137">				ur.setRoleId((String) entry.get(&quot;roleId&quot;));</span>
+<span class="nc" id="L138">				ur.setUpdateUser(userVO.getUpdateUser());</span>
+<span class="nc" id="L139">				ur.setUpdateTime(new Date());</span>
+<span class="nc" id="L140">				ur.setUserId(userVO.getUserId());</span>
+<span class="nc" id="L141">				BeanUtils.copyProperties(ur, userRole);</span>
+<span class="nc" id="L142">				userRoleListTmp.add(userRole);</span>
+<span class="nc" id="L143">				curUserRoleIds.add(userRole.getRoleId());</span>
+			}
+		}
+		
+<span class="nc" id="L147">		List&lt;String&gt; existUserRoleIds = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L148" title="All 2 branches missed.">		for(UserRole ur : userRoleList) {</span>
+<span class="nc" id="L149">			existUserRoleIds.add(ur.getRoleId());</span>
+<span class="nc bnc" id="L150" title="All 2 branches missed.">			if(!curUserRoleIds.contains(ur.getRoleId())) {</span>
+//				 如果当前列表中不包含数据库中查询的记录，则删除该用户对应的角色
+<span class="nc" id="L152">				ur.setEnable(0);</span>
+<span class="nc" id="L153">				this.userRoleDao.save(ur);</span>
+				continue;
+			}
+		}
+		
+<span class="nc bnc" id="L158" title="All 2 branches missed.">		for(UserRole ur : userRoleListTmp) {</span>
+<span class="nc bnc" id="L159" title="All 2 branches missed.">			if(!existUserRoleIds.contains(ur.getRoleId())) {</span>
+//				 如果当前列表中包含了查询数组中没有的结果，则新增该角色
+//				如果查询没有结果，则新增，否则更新现有
+<span class="nc" id="L162">				UserRole usro = this.userRoleDao.getUserRoleByUserIdAndRoleId(ur.getUserId(), ur.getRoleId());</span>
+<span class="nc bnc" id="L163" title="All 2 branches missed.">				if(usro != null) {</span>
+<span class="nc" id="L164">					usro.setEnable(1);</span>
+<span class="nc" id="L165">					this.userRoleDao.save(usro);</span>
+<span class="nc" id="L166">				} else {</span>
+<span class="nc" id="L167">					this.userRoleDao.save(ur);</span>
+				}
+				
+				continue;
+			}
+		}
+		
+<span class="nc" id="L174">		this.userDao.save(user);</span>
+<span class="nc" id="L175">	}</span>
+	
+	@SuppressWarnings(&quot;rawtypes&quot;)
+	@Override
+	public Map listAllUserByCondition(Pageable pageable, List&lt;String&gt; deptIds, 
+			List&lt;String&gt; posIds, String loginName, String userName) {
+<span class="nc" id="L181">		Map ret = userDaoRepository.listAllUserByCondition(pageable, deptIds, posIds, loginName, userName);</span>
+<span class="nc" id="L182">		List&lt;UserVO&gt; uvoList = (List&lt;UserVO&gt;)ret.get(USERLIST);</span>
+<span class="nc" id="L183">		ret.put(USERLIST, uvoList);</span>
+<span class="nc" id="L184">		return ret;</span>
+	}
+
+	/**
+	 * 预留————全量导出用户等操作
+	 */
+	@Override
+	public Map listAllUser() {
+<span class="nc" id="L192">		List&lt;User&gt; userList = userDao.listAllUser();</span>
+<span class="nc" id="L193">		List&lt;UserVO&gt; vos = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L194" title="All 2 branches missed.">		for(User user : userList) {</span>
+<span class="nc" id="L195">			UserVO uvo = new UserVO();</span>
+<span class="nc" id="L196">			BeanUtils.copyProperties(user, uvo);</span>
+<span class="nc" id="L197">			vos.add(uvo);</span>
+		}
+		
+<span class="nc" id="L200">		Map map = new HashMap&lt;&gt;();</span>
+<span class="nc" id="L201">		map.put(&quot;count&quot;, vos.size());</span>
+<span class="nc" id="L202">		map.put(USERLIST, vos);</span>
+<span class="nc" id="L203">		return map;</span>
+	}
+
+	@Override
+	public void saveUserList(List&lt;UserVO&gt; uvoList) throws ThinventBaseException {
+<span class="nc" id="L208">		List&lt;User&gt; userList = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L209" title="All 2 branches missed.">		for (UserVO uvo : uvoList) {</span>
+<span class="nc" id="L210">			User user = new User();</span>
+<span class="nc" id="L211">			BeanUtils.copyProperties(uvo, user);</span>
+<span class="nc" id="L212">			userList.add(user);</span>
+		}
+<span class="nc" id="L214">		this.userDao.save(userList);</span>
+<span class="nc" id="L215">	}</span>
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>

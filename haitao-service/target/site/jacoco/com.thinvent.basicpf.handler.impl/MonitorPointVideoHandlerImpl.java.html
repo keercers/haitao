@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MonitorPointVideoHandlerImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">zhhd-service</a> &gt; <a href="index.source.html" class="el_package">com.thinvent.basicpf.handler.impl</a> &gt; <span class="el_source">MonitorPointVideoHandlerImpl.java</span></div><h1>MonitorPointVideoHandlerImpl.java</h1><pre class="source lang-java linenums">package com.thinvent.basicpf.handler.impl;
+
+import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.thinvent.basicpf.dao.IMonitorPointVideoDao;
+import com.thinvent.basicpf.handler.IMonitorPointVideoHandler;
+import com.thinvent.basicpf.model.MonitorPointVideo;
+import com.thinvent.basicpf.util.MoniterPointVideoVerifyUtil;
+import com.thinvent.library.exception.ThinventBaseException;
+import com.thinvent.library.vo.MonitorPointVideoVO;
+
+@Service
+@Transactional(isolation = Isolation.READ_COMMITTED)
+<span class="nc" id="L22">public class MonitorPointVideoHandlerImpl implements IMonitorPointVideoHandler {</span>
+
+	@Autowired
+	private IMonitorPointVideoDao monitorPointDao;
+
+	@Override
+	public void addMonitorPointVideo(MonitorPointVideo monitorPointVideo) throws ThinventBaseException {
+<span class="nc" id="L29">		MoniterPointVideoVerifyUtil.verifyMonitorPointVideo(monitorPointVideo);</span>
+<span class="nc" id="L30">		monitorPointDao.save(monitorPointVideo);</span>
+<span class="nc" id="L31">	}</span>
+
+	@Override
+	public List&lt;MonitorPointVideoVO&gt; findMonitorPointVideoByMonitorPointDataId(String mpdId)
+			throws ThinventBaseException {
+<span class="nc" id="L36">		List&lt;MonitorPointVideo&gt; monitorPointVideoList = monitorPointDao.findByMpdIdOrderByCaptureTimeDesc(mpdId);</span>
+<span class="nc" id="L37">		return monitorPointVideoList.stream().map(MonitorPointVideo::convertToMonitorPointVideoVO).collect(Collectors.toList());</span>
+	}
+
+	@Override
+	public void updateMonitorPointVideo(MonitorPointVideoVO monitorPointVideoVO) throws ThinventBaseException {
+<span class="nc" id="L42">		monitorPointVideoVO.setCreateTime(new Date());</span>
+<span class="nc" id="L43">		MonitorPointVideo monitorPointVideo = monitorPointDao.findOneByMpdId(monitorPointVideoVO.getMpdId());</span>
+<span class="nc" id="L44">		MoniterPointVideoVerifyUtil.verifyMonitorPointVideo(monitorPointVideo);</span>
+<span class="nc" id="L45">		BeanUtils.copyProperties(monitorPointVideoVO, monitorPointVideo);</span>
+<span class="nc" id="L46">		monitorPointDao.save(monitorPointVideo);</span>
+<span class="nc" id="L47">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <property name="units">in</property>
+    <property name="theme">defaultTheme</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="SHJS_REP" id="5">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.mysql.jdbc.Driver</property>
+            <property name="odaURL">jdbc:mysql://192.168.64.220:32006/haitao</property>
+            <property name="odaUser">root</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">cGFzcw==</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="TrafficFlowMaxAvgByMon" id="1137">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints"/>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData"/>
+            <method name="beforeOpen"><![CDATA[// 观测点
+var mpId = params["mpId"].value;
+// 统计时间范围
+var startTime = params["startTime"].value;
+var endTime   = params["endTime"].value;
+
+this.queryText+=" (                 " +
+				"     SELECT                  " +
+				"       date_format(mpd.FIND_TIME, '%Y-%m') FIND_TIME,             " +     
+				"       mpd.MP_ID MP_ID,                  " +
+				"       AVG(IFNULL(mpd.DWT1, 0)) AVG_DWT1,                  " +
+				"       MAX(IFNULL(mpd.DWT1, 0)) MAX_DWT1,                  " +
+				"       MIN(IFNULL(mpd.DWT1, 0)) MIN_DWT1,                  " +
+				"       AVG(IFNULL(mpd.FREEBOARD, 0)) AVG_FREEBOARD,                  " +
+				"       MAX(IFNULL(mpd.FREEBOARD, 0)) MAX_FREEBOARD,                  " +
+				"       AVG(IFNULL(mpd.LENGTH, 0)) AVG_LENGTH,                  " +
+				"       MAX(IFNULL(mpd.LENGTH, 0)) MAX_LENGTH,                  " +
+				"       AVG(IFNULL(mpd.WIDTH, 0)) AVG_WIDTH,                  " +
+				"       MAX(IFNULL(mpd.WIDTH, 0)) MAX_WIDTH                  " +
+				"     FROM                  " +
+				"       monitor_point_data mpd                   " +
+				"     WHERE DATA_TYPE = '1' AND DATA_STATUS != '0' AND MP_ID = '" + mpId + "'           " +
+				"     AND date_format(FIND_TIME, '%Y-%m') >= '" + startTime + "'           " +
+				"     AND date_format(FIND_TIME, '%Y-%m') <= '" + endTime + "'           " +
+				"     GROUP BY                  " +
+				"       date_format(FIND_TIME, '%Y-%m'), mpd.MP_ID                  " +
+				"   ) i02                  " +
+				"   ORDER BY                  " +
+				"     i02.FIND_TIME ";
+                ]]></method>
+            <property name="dataSource">SHJS_REP</property>
+            <list-property name="resultSet"/>
+            <xml-property name="queryText"><![CDATA[SELECT                 
+				   i02.FIND_TIME,               
+				    IFNULL(i02.AVG_DWT1, 0) AVG_DWT1,                 
+				    IFNULL(i02.MAX_DWT1, 0) MAX_DWT1,                 
+				    IFNULL(i02.MIN_DWT1, 0) MIN_DWT1,                 
+				    IFNULL(i02.AVG_FREEBOARD, 0) AVG_FREEBOARD,                 
+				    IFNULL(i02.MAX_FREEBOARD, 0) MAX_FREEBOARD,                 
+				    IFNULL(i02.AVG_LENGTH, 0) AVG_LENGTH,                 
+				    IFNULL(i02.MAX_LENGTH, 0) MAX_LENGTH,                 
+				    IFNULL(i02.AVG_WIDTH, 0) AVG_WIDTH,                 
+				    IFNULL(i02.MAX_WIDTH, 0) MAX_WIDTH                 
+				  FROM]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <themes>
+        <theme name="defaultTheme" id="4"/>
+    </themes>
+    <page-setup>
+        <simple-master-page name="NewSimpleMasterPage" id="3"/>
+    </page-setup>
+</library>

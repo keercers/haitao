@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CompanyVerifyUtil.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">zhhd-service</a> &gt; <a href="index.source.html" class="el_package">com.thinvent.basicpf.util</a> &gt; <span class="el_source">CompanyVerifyUtil.java</span></div><h1>CompanyVerifyUtil.java</h1><pre class="source lang-java linenums">package com.thinvent.basicpf.util;
+
+import com.thinvent.basicpf.model.Company;
+import com.thinvent.library.Constants;
+import com.thinvent.library.dim.TvtExceptionEnum;
+import com.thinvent.library.exception.OptionException;
+import com.thinvent.library.exception.ThinventBaseException;
+
+public class CompanyVerifyUtil {
+
+	private CompanyVerifyUtil(){}
+
+	public static void verifyUpdate(String state) throws ThinventBaseException{
+<span class="nc bnc" id="L14" title="All 2 branches missed.">		if(!Constants.RES_SUCCESS.equals(state)){</span>
+<span class="nc" id="L15">			throw new OptionException(TvtExceptionEnum.OPT_SAVE_FAULSE.getIndex(), TvtExceptionEnum.OPT_SAVE_FAULSE.getName());</span>
+		}
+<span class="nc" id="L17">	}</span>
+	
+	public static void verifyObject(Object object) throws ThinventBaseException{
+<span class="nc bnc" id="L20" title="All 2 branches missed.">		if(object == null){</span>
+<span class="nc" id="L21">			throw new OptionException(TvtExceptionEnum.OPT_QUERY_FAULSE.getIndex(), TvtExceptionEnum.OPT_QUERY_FAULSE.getName());</span>
+		}
+<span class="nc" id="L23">	}</span>
+
+	public static void verifyDeleteComResult(Boolean existsDept) throws ThinventBaseException {
+<span class="nc bnc" id="L26" title="All 2 branches missed.">		if (existsDept) {</span>
+<span class="nc" id="L27">			throw new OptionException(TvtExceptionEnum.DATA_VER_COM_DEP_CHILD_EXSIT.getIndex(), TvtExceptionEnum.DATA_VER_COM_DEP_CHILD_EXSIT.getName());</span>
+		}
+<span class="nc" id="L29">	}</span>
+
+	public static void verifySaveCompany(Boolean exist) throws ThinventBaseException {
+<span class="nc bnc" id="L32" title="All 2 branches missed.">		if (exist) {</span>
+<span class="nc" id="L33">			throw new OptionException(TvtExceptionEnum.DATA_VER_COM_COM_CHILD_EXSIT.getIndex(), TvtExceptionEnum.DATA_VER_COM_COM_CHILD_EXSIT.getName());</span>
+		}
+<span class="nc" id="L35">	}</span>
+
+	public static void verifyAddExistComName(Company company) throws ThinventBaseException {
+<span class="nc bnc" id="L38" title="All 2 branches missed.">		if (company != null) {</span>
+<span class="nc" id="L39">			throw new OptionException(TvtExceptionEnum.DATA_VER_COM_COMNAME_EXSIT.getIndex(),TvtExceptionEnum.DATA_VER_COM_COMNAME_EXSIT.getName());</span>
+		}
+<span class="nc" id="L41">	}</span>
+
+	public static void verifyUpdateExistComName(Company company,Company oldCompany) throws ThinventBaseException {
+<span class="nc bnc" id="L44" title="All 4 branches missed.">		if (company != null &amp;&amp; !company.getComId().equals(oldCompany.getComId())) {</span>
+<span class="nc" id="L45">			throw new OptionException(TvtExceptionEnum.DATA_VER_COM_COMNAME_EXSIT.getIndex(),TvtExceptionEnum.DATA_VER_COM_COMNAME_EXSIT.getName());</span>
+		}
+<span class="nc" id="L47">	}</span>
+
+
+	public static void verifyDelExistComChild(Company company) throws ThinventBaseException {
+<span class="nc bnc" id="L51" title="All 2 branches missed.">		if (company != null) {</span>
+<span class="nc" id="L52">			throw new OptionException(TvtExceptionEnum.DATA_VER_COM_COMPANY_CHILD_EXSIT.getIndex(),TvtExceptionEnum.DATA_VER_COM_COMPANY_CHILD_EXSIT.getName());</span>
+		}
+<span class="nc" id="L54">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>

@@ -1,0 +1,10 @@
+{
+	"logging":{
+		"file":"logs/zhhd-service.log",
+		"level":{
+			"org.springframework":"info",
+			"root":"Info",
+			"com.thinvent":"debug"
+		}
+	}
+}

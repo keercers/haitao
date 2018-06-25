@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+  
+	<groupId>com.thinvent.haitao.common</groupId>
+	<artifactId>haitao-common</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.3.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>	
+		<dependency>
+			<groupId>com.thinvent.basicpf.library</groupId>
+			<artifactId>common-library</artifactId>
+		    <version>0.0.1-SNAPSHOT</version>
+		</dependency>		
+	</dependencies>
+ 
+	<distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>NexusReleases</name>
+            <url>http://192.168.64.105:8081/nexus/content/repositories/releases/</url>
+        </repository>
+       	<snapshotRepository>
+       		<id>nexus-snapshots</id>
+       		<name>NexusSnapshots</name>
+       		<url>http://192.168.64.105:8081/nexus/content/repositories/snapshots/</url>
+       	</snapshotRepository>
+    </distributionManagement>
+
+    <build>
+      <plugins>
+          <plugin>
+            <inherited>true</inherited>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <executions>
+                <execution>
+                    <id>attach-sources</id>
+                    <goals>
+                        <goal>jar</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+      </plugins>
+  </build>
+  
+</project>

@@ -1,0 +1,26 @@
+
+{
+	"basic": {
+		"proMap": [
+			{"name": "basicpf"},
+			{"url": "http://192.168.64.220:9001/"}
+			{"zhhdUrl": "http://192.168.64.220:9002/"}
+		],
+		"tracker": {
+			"server": "192.168.64.104:22122"
+		},
+		"proList": [
+			"test1",
+			"test2"
+		],
+		"proListMap": [
+			{"name": "key1"},
+			{"value": "value1"},
+			{"name": "key2"},
+			{"value": "value2"}
+		],
+		"zhhdServiceUrl": "http://127.0.0.1:9001/",
+		"zhhdBaseServiceUrl": "http://127.0.0.1:9002/",
+		"mergeServiceUrl": "http://127.0.0.1:9004/",
+	}
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserRoleHandlerImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">zhhd-service</a> &gt; <a href="index.source.html" class="el_package">com.thinvent.basicpf.handler.impl</a> &gt; <span class="el_source">UserRoleHandlerImpl.java</span></div><h1>UserRoleHandlerImpl.java</h1><pre class="source lang-java linenums">package com.thinvent.basicpf.handler.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.thinvent.basicpf.dao.IUserRoleDao;
+import com.thinvent.basicpf.handler.IUserRoleHandler;
+import com.thinvent.basicpf.model.UserRole;
+import com.thinvent.basicpf.util.UserVerifyUtil;
+import com.thinvent.library.Constants;
+import com.thinvent.library.exception.ThinventBaseException;
+import com.thinvent.library.util.StringUtil;
+import com.thinvent.library.vo.UserRoleVO;
+
+@Service
+@Transactional(isolation=Isolation.READ_COMMITTED)
+<span class="nc" id="L23">public class UserRoleHandlerImpl implements IUserRoleHandler {</span>
+
+	@Autowired
+	private IUserRoleDao userRoleDao;
+	
+	@Override
+	public void save(UserRoleVO userRoleVO) {
+<span class="nc" id="L30">		UserRole userRole = new UserRole();</span>
+<span class="nc" id="L31">		BeanUtils.copyProperties(userRoleVO, userRole);</span>
+<span class="nc" id="L32">		userRoleDao.save(userRole);</span>
+<span class="nc" id="L33">	}</span>
+
+	@Override
+	public void update(UserRoleVO userRoleVO) throws ThinventBaseException {
+<span class="nc" id="L37">		UserRole userRole = userRoleDao.getUserRoleById(userRoleVO.getId());</span>
+<span class="nc" id="L38">		UserVerifyUtil.verifyUserRole(userRole);</span>
+<span class="nc" id="L39">		BeanUtils.copyProperties(userRoleVO, userRole);</span>
+<span class="nc" id="L40">		userRoleDao.save(userRole);</span>
+<span class="nc" id="L41">	}</span>
+
+	@Override
+	public List&lt;UserRoleVO&gt; getUserRoleListByUserId(String userId) throws ThinventBaseException {
+<span class="nc" id="L45">		List&lt;UserRole&gt; userRoleList = userRoleDao.getUserRoleByUserId(userId);</span>
+<span class="nc" id="L46">		List&lt;UserRoleVO&gt; userRoleVOList = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">		for(UserRole userRole : userRoleList) {</span>
+<span class="nc" id="L48">			UserRoleVO userRoleVO = new UserRoleVO();</span>
+<span class="nc" id="L49">			BeanUtils.copyProperties(userRole, userRoleVO);</span>
+<span class="nc" id="L50">			userRoleVOList.add(userRoleVO);</span>
+		}
+<span class="nc" id="L52">		return userRoleVOList;</span>
+	}
+	@Override
+	public List&lt;UserRoleVO&gt; getUserRoleListByRoleId(String roleId) throws ThinventBaseException {
+<span class="nc" id="L56">		List&lt;UserRole&gt; userRoleList = userRoleDao.getUserRoleByRoleId(roleId);</span>
+<span class="nc" id="L57">		List&lt;UserRoleVO&gt; userRoleVOList = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L58" title="All 2 branches missed.">		for(UserRole userRole : userRoleList) {</span>
+<span class="nc" id="L59">			UserRoleVO userRoleVO = new UserRoleVO();</span>
+<span class="nc" id="L60">			BeanUtils.copyProperties(userRole, userRoleVO);</span>
+<span class="nc" id="L61">			userRoleVOList.add(userRoleVO);</span>
+		}
+<span class="nc" id="L63">		return userRoleVOList;</span>
+	}
+
+	@Override
+	public List&lt;String&gt; queryUserIdsByRoleIds(String roleIds) {
+<span class="nc" id="L68">		List&lt;String&gt; roleIdList = StringUtil.stringSZToList(roleIds.split(Constants.UUID_EXAMPLE));</span>
+<span class="nc" id="L69">		return userRoleDao.getUserIdsByRoleIds(roleIdList);</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>

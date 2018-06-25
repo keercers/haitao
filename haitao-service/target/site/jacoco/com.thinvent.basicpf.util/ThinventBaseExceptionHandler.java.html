@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ThinventBaseExceptionHandler.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">zhhd-service</a> &gt; <a href="index.source.html" class="el_package">com.thinvent.basicpf.util</a> &gt; <span class="el_source">ThinventBaseExceptionHandler.java</span></div><h1>ThinventBaseExceptionHandler.java</h1><pre class="source lang-java linenums">package com.thinvent.basicpf.util;
+
+import com.thinvent.library.dim.TvtExceptionEnum;
+import com.thinvent.library.exception.ThinventBaseException;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.dao.DataAccessException;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@RestController
+@ControllerAdvice
+<span class="nc" id="L19">@Slf4j</span>
+<span class="nc" id="L20">public class ThinventBaseExceptionHandler {</span>
+
+    @SuppressWarnings(&quot;deprecation&quot;)
+	@ExceptionHandler(value = ThinventBaseException.class)
+    @ResponseBody
+    public void userErrorHandler(HttpServletRequest req, Exception e, HttpServletResponse res) throws IOException {
+<span class="nc" id="L26">        log.info(&quot;error:&quot; + e);</span>
+<span class="nc" id="L27">        ThinventBaseException baseEx = (ThinventBaseException) e;</span>
+        //res.sendError(baseEx.getCode(), baseEx.getMsg());
+<span class="nc" id="L29">        res.setStatus(baseEx.getCode(), baseEx.getMsg());</span>
+<span class="nc" id="L30">		res.setContentType(&quot;application/json;charset=utf-8&quot;);</span>
+<span class="nc" id="L31">		res.getWriter().write(baseEx.getMsg());</span>
+<span class="nc" id="L32">    }</span>
+
+    @SuppressWarnings(&quot;deprecation&quot;)
+	@ExceptionHandler(value = DataAccessException.class)
+    @ResponseBody
+    public void daoErrorHandler(DataAccessException daoEx, HttpServletResponse res) throws IOException {
+<span class="nc" id="L38">        log.info(&quot;error:&quot; + daoEx);</span>
+<span class="nc" id="L39">        res.setStatus(TvtExceptionEnum.DATA_ACCESS_FAILURE.getIndex(), TvtExceptionEnum.DATA_ACCESS_FAILURE.getName());</span>
+<span class="nc" id="L40">        res.setContentType(&quot;application/json;charset=utf-8&quot;);</span>
+<span class="nc" id="L41">		res.getWriter().write(TvtExceptionEnum.DATA_ACCESS_FAILURE.getName());</span>
+<span class="nc" id="L42">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RoleHandlerImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">zhhd-service</a> &gt; <a href="index.source.html" class="el_package">com.thinvent.basicpf.handler.impl</a> &gt; <span class="el_source">RoleHandlerImpl.java</span></div><h1>RoleHandlerImpl.java</h1><pre class="source lang-java linenums">package com.thinvent.basicpf.handler.impl;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+import com.thinvent.basicpf.dao.jpa.RoleDaoRepositoryImpl;
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.thinvent.basicpf.dao.IMoudleDao;
+import com.thinvent.basicpf.dao.IRoleDao;
+import com.thinvent.basicpf.dao.IRoleMoudleDao;
+import com.thinvent.basicpf.dao.IUserRoleDao;
+import com.thinvent.basicpf.handler.IRoleHandler;
+import com.thinvent.basicpf.model.Moudle;
+import com.thinvent.basicpf.model.Role;
+import com.thinvent.basicpf.model.RoleMoudle;
+import com.thinvent.basicpf.model.UserRole;
+import com.thinvent.basicpf.util.RoleVerifyUtil;
+import com.thinvent.library.exception.ThinventBaseException;
+import com.thinvent.library.util.UUIDUtil;
+import com.thinvent.library.vo.RoleVO;
+import com.thinvent.library.vo.UserRoleVO;
+
+@Service
+@Transactional(isolation = Isolation.READ_COMMITTED)
+<span class="nc" id="L33">public class RoleHandlerImpl implements IRoleHandler {</span>
+
+	@Autowired
+	private IRoleDao roleDao;
+
+	@Autowired
+	private IUserRoleDao userRoleDao;
+	
+	@Autowired
+    private IMoudleDao moudleDao;
+	
+	@Autowired
+	private IRoleMoudleDao roleMoudleDao;
+	@Autowired
+	private RoleDaoRepositoryImpl roleDaoRepository;
+
+	private static final String USERID = &quot;userId&quot;;
+<span class="nc" id="L50">	private static final String ROLELIST = new String(&quot;roleList&quot;).intern();</span>
+	
+	@Override
+	public Role findRoleByRoleId(String roleId) {
+<span class="nc" id="L54">		return this.roleDao.getByRoleId(roleId);</span>
+	}
+
+	@Override
+	public void addRole(RoleVO roleVO) throws ThinventBaseException  {
+<span class="nc" id="L59">		Date date = new Date();</span>
+<span class="nc" id="L60">		roleVO.setCreateTime(date);</span>
+<span class="nc" id="L61">		roleVO.setUpdateTime(date);</span>
+<span class="nc" id="L62">		Role role = new Role();</span>
+<span class="nc" id="L63">		BeanUtils.copyProperties(roleVO, role);</span>
+<span class="nc" id="L64">		Role existRole = roleDao.findOneByRoleNameAndEnable(role.getRoleName(),1);</span>
+<span class="nc" id="L65">		RoleVerifyUtil.verifyAddExistRole(existRole);</span>
+<span class="nc" id="L66">		this.roleDao.save(role);</span>
+<span class="nc" id="L67">		List&lt;Map&lt;String, Object&gt;&gt; userRoleVOList = roleVO.getUserRoleList();</span>
+<span class="nc bnc" id="L68" title="All 2 branches missed.">		if (!userRoleVOList.isEmpty()) {</span>
+<span class="nc bnc" id="L69" title="All 2 branches missed.">			for (Map entry : userRoleVOList) {</span>
+<span class="nc" id="L70">				UserRole userRole = new UserRole();</span>
+<span class="nc" id="L71">				UserRoleVO urVo = new UserRoleVO();</span>
+<span class="nc" id="L72">				urVo.setRoleId(role.getRoleId());</span>
+<span class="nc" id="L73">				urVo.setUserId((String) entry.get(USERID));</span>
+<span class="nc" id="L74">				urVo.setCreateUser(roleVO.getCreateUser());</span>
+<span class="nc" id="L75">				urVo.setUpdateUser(roleVO.getUpdateUser());</span>
+<span class="nc" id="L76">				urVo.setCreateTime(new Date());</span>
+<span class="nc" id="L77">				urVo.setUpdateTime(new Date());</span>
+<span class="nc" id="L78">				BeanUtils.copyProperties(urVo, userRole);</span>
+<span class="nc" id="L79">				this.userRoleDao.save(userRole);</span>
+			}
+		}
+		
+		// 初始化角色模块
+<span class="nc" id="L84">		List&lt;Moudle&gt; moudelList = moudleDao.findByEnable(1);</span>
+<span class="nc" id="L85">		int enalbe = 0;</span>
+<span class="nc bnc" id="L86" title="All 2 branches missed.">		if(&quot;INIT&quot;.equals(role.getRoleName())) {</span>
+<span class="nc" id="L87">			enalbe = 1;</span>
+		}
+<span class="nc bnc" id="L89" title="All 2 branches missed.">		for (Moudle moudle : moudelList) {</span>
+<span class="nc" id="L90">			RoleMoudle roleMoudle = new RoleMoudle();</span>
+<span class="nc" id="L91">			roleMoudle.setMoudelId(moudle.getMoudleId());</span>
+<span class="nc" id="L92">			roleMoudle.setRoleId(roleVO.getRoleId());</span>
+<span class="nc" id="L93">			roleMoudle.setEnable(enalbe);</span>
+<span class="nc" id="L94">			roleMoudle.setCreateTime(date);</span>
+<span class="nc" id="L95">			roleMoudle.setUpdateTime(date);</span>
+<span class="nc" id="L96">			roleMoudle.setCreateUser(roleVO.getCreateUser());</span>
+<span class="nc" id="L97">			roleMoudle.setUpdateUser(roleVO.getCreateUser());</span>
+<span class="nc" id="L98">			roleMoudle.setRoleModuleId(UUIDUtil.getUuid());</span>
+<span class="nc" id="L99">			roleMoudleDao.save(roleMoudle);</span>
+		}
+<span class="nc" id="L101">	}</span>
+
+	@Override
+	public void update(RoleVO roleVO) throws ThinventBaseException {
+<span class="nc" id="L105">		Role role = this.roleDao.getByRoleId(roleVO.getRoleId());</span>
+<span class="nc" id="L106">		Role existRole = roleDao.findOneByRoleNameAndEnable(roleVO.getRoleName(),1);</span>
+<span class="nc" id="L107">		RoleVerifyUtil.verifyUpdateExistRole(existRole,role);</span>
+<span class="nc" id="L108">		RoleVerifyUtil.verifyrole(role);</span>
+<span class="nc" id="L109">		roleVO.setId(role.getId());</span>
+<span class="nc" id="L110">		BeanUtils.copyProperties(roleVO, role);</span>
+<span class="nc" id="L111">		this.roleDao.save(role);</span>
+<span class="nc" id="L112">		List&lt;UserRole&gt; list = this.userRoleDao.getUserRoleByRoleId(roleVO.getRoleId());</span>
+<span class="nc bnc" id="L113" title="All 2 branches missed.">		for (UserRole ur : list) {</span>
+<span class="nc" id="L114">			ur.setEnable(0);</span>
+<span class="nc" id="L115">			this.userRoleDao.save(ur);</span>
+		}
+<span class="nc" id="L117">		List&lt;Map&lt;String, Object&gt;&gt; userRoleVOList = roleVO.getUserRoleList();</span>
+<span class="nc bnc" id="L118" title="All 2 branches missed.">		if (userRoleVOList == null) {</span>
+<span class="nc" id="L119">			return;</span>
+		}
+		
+<span class="nc bnc" id="L122" title="All 2 branches missed.">		for (Map entry : userRoleVOList) {</span>
+<span class="nc bnc" id="L123" title="All 2 branches missed.">			if (entry.containsKey(&quot;userId&quot;)) {</span>
+<span class="nc" id="L124">				UserRole ur = this.userRoleDao.getUserRoleByUserIdAndRoleId((String) entry.get(USERID),</span>
+<span class="nc" id="L125">						roleVO.getRoleId());</span>
+<span class="nc bnc" id="L126" title="All 2 branches missed.">				if (ur != null) {</span>
+<span class="nc" id="L127">					ur.setEnable(1);</span>
+<span class="nc" id="L128">					this.userRoleDao.save(ur);</span>
+<span class="nc" id="L129">				} else {</span>
+<span class="nc" id="L130">					UserRole userRole = new UserRole();</span>
+<span class="nc" id="L131">					UserRoleVO urVo = new UserRoleVO();</span>
+<span class="nc" id="L132">					urVo.setRoleId(roleVO.getRoleId());</span>
+<span class="nc" id="L133">					urVo.setUserId((String) entry.get(USERID));</span>
+<span class="nc" id="L134">					urVo.setUpdateUser(roleVO.getUpdateUser());</span>
+<span class="nc" id="L135">					urVo.setUpdateTime(new Date());</span>
+<span class="nc" id="L136">					BeanUtils.copyProperties(urVo, userRole);</span>
+<span class="nc" id="L137">					this.userRoleDao.save(userRole);</span>
+				}
+			}
+		}
+<span class="nc" id="L141">	}</span>
+
+	@Override
+	public void delete(String roleId) throws ThinventBaseException {
+<span class="nc" id="L145">		Role role = this.roleDao.getByRoleId(roleId);</span>
+<span class="nc" id="L146">		RoleVerifyUtil.verifyrole(role);</span>
+<span class="nc" id="L147">		role.setEnable(0);</span>
+<span class="nc" id="L148">		this.roleDao.save(role);</span>
+<span class="nc" id="L149">		List&lt;UserRole&gt; userRoleList = this.userRoleDao.getUserRoleByRoleId(roleId);</span>
+<span class="nc bnc" id="L150" title="All 2 branches missed.">		for (UserRole ur : userRoleList) {</span>
+<span class="nc" id="L151">			ur.setEnable(0);</span>
+<span class="nc" id="L152">			this.userRoleDao.save(ur);</span>
+		}
+		
+		// 清除角色模块
+<span class="nc" id="L156">		List&lt;RoleMoudle&gt; roleMoudleList = roleMoudleDao.findByRoleIdAndEnable(roleId, 1);</span>
+<span class="nc bnc" id="L157" title="All 2 branches missed.">		for (RoleMoudle roleMoudle : roleMoudleList) {</span>
+<span class="nc" id="L158">			roleMoudle.setEnable(0);</span>
+<span class="nc" id="L159">			roleMoudleDao.save(roleMoudle);</span>
+		}
+<span class="nc" id="L161">	}</span>
+
+	@Override
+	public Map listAllRoleByCondition(Pageable pageable, String posName, String posType) {
+<span class="nc" id="L165">		Map ret = roleDaoRepository.listAllRoleByCondition(pageable, posName, posType);</span>
+<span class="nc" id="L166">		List&lt;RoleVO&gt; rvoList = (List&lt;RoleVO&gt;)ret.get(ROLELIST);</span>
+<span class="nc" id="L167">		ret.put(ROLELIST, rvoList);</span>
+<span class="nc" id="L168">		return ret;</span>
+	}
+
+	@Override
+	public List findAllRole() throws ThinventBaseException {
+<span class="nc" id="L173">		List&lt;Role&gt; roles = this.roleDao.findAllRole();</span>
+<span class="nc" id="L174">		List&lt;RoleVO&gt; rvos = new ArrayList();</span>
+<span class="nc" id="L175">		roles.forEach(role -&gt; {</span>
+<span class="nc" id="L176">			RoleVO rvo = new RoleVO();</span>
+<span class="nc" id="L177">			BeanUtils.copyProperties(role, rvo);</span>
+<span class="nc" id="L178">			rvos.add(rvo);</span>
+<span class="nc" id="L179">		});</span>
+
+<span class="nc" id="L181">		return rvos;</span>
+	}
+
+	@Override
+	public List&lt;RoleVO&gt; findAllRoleByUserId(String userId) {
+<span class="nc" id="L186">		List&lt;Role&gt; roles = roleDao.getByUserId(userId);</span>
+<span class="nc" id="L187">		List&lt;RoleVO&gt; roleVOs = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L188" title="All 2 branches missed.">		for (Role role : roles) {</span>
+<span class="nc" id="L189">			RoleVO roleVO = new RoleVO();</span>
+<span class="nc" id="L190">			BeanUtils.copyProperties(role, roleVO);</span>
+<span class="nc" id="L191">			roleVOs.add(roleVO);</span>
+		}
+<span class="nc" id="L193">		return roleVOs;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>

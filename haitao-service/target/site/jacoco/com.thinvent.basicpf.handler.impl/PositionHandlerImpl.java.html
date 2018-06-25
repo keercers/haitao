@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PositionHandlerImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">zhhd-service</a> &gt; <a href="index.source.html" class="el_package">com.thinvent.basicpf.handler.impl</a> &gt; <span class="el_source">PositionHandlerImpl.java</span></div><h1>PositionHandlerImpl.java</h1><pre class="source lang-java linenums">package com.thinvent.basicpf.handler.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.thinvent.basicpf.dao.IPositionDao;
+import com.thinvent.basicpf.dao.IUserDao;
+import com.thinvent.basicpf.dao.jpa.PositionDaoRepositoryImpl;
+import com.thinvent.basicpf.handler.IPositionHandler;
+import com.thinvent.basicpf.model.Position;
+import com.thinvent.basicpf.util.PositionVerifyUtil;
+import com.thinvent.library.exception.ThinventBaseException;
+import com.thinvent.library.vo.PositionVO;
+
+@Service
+@Transactional(isolation = Isolation.READ_COMMITTED)
+<span class="nc" id="L26">public class PositionHandlerImpl implements IPositionHandler {</span>
+
+    @Autowired
+    private IPositionDao positionDao;
+    
+    @Autowired
+	private IUserDao userDao;
+    
+    @Autowired
+	private PositionDaoRepositoryImpl positionDaoRepository;
+    
+<span class="nc" id="L37">    private static final String POSITIONLIST = new String(&quot;positionList&quot;).intern();</span>
+
+    @Override
+    public void addPosition(Position position) throws ThinventBaseException {
+    	Position pos;
+<span class="nc bnc" id="L42" title="All 2 branches missed.">    	if(!&quot;&quot;.equals(position.getDepId())){</span>
+<span class="nc" id="L43">    		pos = positionDao.findByPosNameAndPosTypeAndDepIdAndEnable(position.getPosName(), position.getPosType(), position.getDepId(), 1);</span>
+<span class="nc" id="L44">    	}else {</span>
+<span class="nc" id="L45">    		pos = positionDao.findByPosNameAndPosTypeAndEnableAndDepIdIsNull(position.getPosName(), position.getPosType(), 1);</span>
+    	}
+<span class="nc" id="L47">    	PositionVerifyUtil.verifyExistPos(pos);</span>
+        // 将id设置为0,强制做新增保存
+<span class="nc" id="L49">        position.setId(0);</span>
+<span class="nc" id="L50">        positionDao.save(position);</span>
+<span class="nc" id="L51">    }</span>
+
+    @Override
+    public void updatePosition(Position position) throws ThinventBaseException {
+    	Position pos;
+<span class="nc bnc" id="L56" title="All 2 branches missed.">    	if(!&quot;&quot;.equals(position.getDepId())){</span>
+<span class="nc" id="L57">    		pos = positionDao.findByPosNameAndPosTypeAndDepIdAndEnableAndPosIdNot(position.getPosName(), position.getPosType(), position.getDepId(), 1, position.getPosId());</span>
+<span class="nc" id="L58">    	} else {</span>
+<span class="nc" id="L59">    		pos = positionDao.findByPosNameAndPosTypeAndDepIdIsNullAndEnableAndPosIdNot(position.getPosName(), position.getPosType(), 1, position.getPosId());</span>
+    	}
+<span class="nc" id="L61">    	PositionVerifyUtil.verifyExistPos(pos);</span>
+    	
+<span class="nc" id="L63">    	Position oldPosition = positionDao.findOneByPosIdAndEnable(position.getPosId(), 1);</span>
+<span class="nc" id="L64">        PositionVerifyUtil.verifyPos(oldPosition);</span>
+<span class="nc" id="L65">        position.setId(oldPosition.getId()).setPosId(oldPosition.getPosId());</span>
+<span class="nc" id="L66">        positionDao.save(position);</span>
+<span class="nc" id="L67">    }</span>
+
+    @Override
+    public PositionVO findByPosId(String posId) throws ThinventBaseException {
+<span class="nc" id="L71">        Position position = positionDao.findOneByPosIdAndEnable(posId, 1);</span>
+<span class="nc bnc" id="L72" title="All 2 branches missed.">        if(position == null)</span>
+<span class="nc" id="L73">        	return null;</span>
+<span class="nc" id="L74">        return position.convertToPositionVO();</span>
+    }
+
+    @Override
+    public void deletePosition(String posId) throws ThinventBaseException {
+<span class="nc" id="L79">    	Boolean existsUser = this.userDao.existsByPosIdAndEnable(posId);</span>
+<span class="nc" id="L80">		PositionVerifyUtil.verifyDeletePosResult(existsUser);</span>
+<span class="nc" id="L81">        Position position = positionDao.findOneByPosIdAndEnable(posId, 1);</span>
+<span class="nc" id="L82">        PositionVerifyUtil.verifyPos(position);</span>
+<span class="nc" id="L83">        position.setEnable(0);</span>
+<span class="nc" id="L84">        positionDao.save(position);</span>
+<span class="nc" id="L85">    }</span>
+    
+    @Override
+    public Map listAllPositionByCondition(Pageable pageable, String posName, String posType){
+<span class="nc" id="L89">    	Map ret = positionDaoRepository.listAllPositionByCondition(pageable, posName, posType);</span>
+<span class="nc" id="L90">		List&lt;PositionVO&gt; pvoList = (List&lt;PositionVO&gt;)ret.get(POSITIONLIST);</span>
+<span class="nc" id="L91">		ret.put(POSITIONLIST, pvoList);</span>
+<span class="nc" id="L92">		return ret;</span>
+    }
+    
+    @Override
+    public List&lt;PositionVO&gt; listAllPositionDistinctByName() {
+<span class="nc" id="L97">    	List&lt;Position&gt; positions = positionDao.listAllPositionDistinctByName();</span>
+<span class="nc" id="L98">    	List&lt;PositionVO&gt; pvo = new ArrayList();</span>
+<span class="nc" id="L99">    	positions.forEach(position -&gt; pvo.add(position.convertToPositionVO()));</span>
+<span class="nc" id="L100">    	return pvo;</span>
+    }
+
+    @Override
+    public List&lt;PositionVO&gt; findByPosName(String posName, Pageable pageable) {
+<span class="nc" id="L105">        List&lt;Position&gt; positions = positionDao.listPosByPosName(posName, pageable);</span>
+<span class="nc" id="L106">        return positions.stream().map(Position::convertToPositionVO).collect(Collectors.toList());</span>
+    }
+
+	@Override
+	public PositionVO getPositionByPosNameAndPosType(String posName, String posType) throws ThinventBaseException {
+<span class="nc" id="L111">		Position position = positionDao.findOneByPosNameAndPosTypeAndEnable(posName, posType, 1);</span>
+<span class="nc" id="L112">		PositionVO positionVO = new PositionVO();</span>
+<span class="nc bnc" id="L113" title="All 2 branches missed.">		if (position == null) {</span>
+<span class="nc" id="L114">			return null;</span>
+		}
+<span class="nc" id="L116">		BeanUtils.copyProperties(position, positionVO);</span>
+<span class="nc" id="L117">		return positionVO;</span>
+	}
+
+    @Override
+    public PositionVO findOneByPosName(String posName) {
+<span class="nc" id="L122">		Position position = positionDao.findOneByPosNameAndEnable(posName, 1);</span>
+<span class="nc" id="L123">		PositionVO positionVO = new PositionVO();</span>
+<span class="nc bnc" id="L124" title="All 2 branches missed.">		if (position == null) {</span>
+<span class="nc" id="L125">			return null;</span>
+		}
+<span class="nc" id="L127">		BeanUtils.copyProperties(position, positionVO);</span>
+<span class="nc" id="L128">		return positionVO;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>
