@@ -20,12 +20,10 @@ public class ReportAdaptImpl implements IReportAdapt {
 	@Override
 	public JSONObject getReportData(Map<String, Object> params) throws ThinventBaseException {
 		Object reportName=params.get("reportName");
-		Object mpId=params.get("mpId");
 		Object startTime=params.get("startTime");
 		Object endTime=params.get("endTime");
 		StringBuilder sbf=new StringBuilder();
 		sbf.append("&reportName=" + (reportName == null ? "" : reportName));
-		sbf.append("&mpId=" + (mpId == null ? "" : mpId));
 		sbf.append("&startTime=" + (startTime == null ? "" : startTime));
 		sbf.append("&endTime=" + (endTime == null ? "" : endTime));
 		String url = basicUrl+"reportView/get?" + sbf;
@@ -37,13 +35,11 @@ public class ReportAdaptImpl implements IReportAdapt {
 	public Map<String, Object> exportReportData(Map<String, Object> params) throws ThinventBaseException {
 		Object exportFormat=params.get("exportFormat");
 		Object reportName=params.get("reportName");
-		Object mpId=params.get("mpId");
 		Object startTime=params.get("startTime");
 		Object endTime=params.get("endTime");
 		StringBuilder sbf=new StringBuilder();
 		sbf.append("&exportFormat=" + (exportFormat == null ? "" : exportFormat));
 		sbf.append("&reportName=" + (reportName == null ? "" : reportName));
-		sbf.append("&mpId=" + (mpId == null ? "" : mpId));
 		sbf.append("&startTime=" + (startTime == null ? "" : startTime));
 		sbf.append("&endTime=" + (endTime == null ? "" : endTime));
 		String url = basicUrl+"reportView/export?" + sbf;

@@ -32,19 +32,16 @@ public class ReportController {
 	@ApiOperation(value="报表管理", notes="报表管理")
 	@ApiImplicitParams({
 		@ApiImplicitParam(name="reportName",required=true, value = "reportName", dataType = "string", paramType = "query"),
-		@ApiImplicitParam(name="mpId",required=true, value = "mpId", dataType = "string", paramType = "query"),
 		@ApiImplicitParam(name="startTime",required=true, value = "startTime", dataType = "string", paramType = "query"),
 		@ApiImplicitParam(name="endTime",required=true, value = "endTime", dataType = "string", paramType = "query"),
 	})
 	@ResponseBody
 	public Map getReportData(
 			@RequestParam(value = "reportName", required = true) String reportName,
-			@RequestParam(value = "mpId", required = true) String mpId, 
 			@RequestParam(value = "startTime", required = true) String startTime, 
 			@RequestParam(value = "endTime", required = true) String endTime) throws ThinventBaseException {
 		Map<String, Object> params = new HashMap();
 		params.put("reportName", reportName);
-		params.put("mpId", mpId);
 		params.put("startTime", startTime);
 		params.put("endTime", endTime);
 		return this.reportService.getReportData(params);
@@ -56,7 +53,6 @@ public class ReportController {
 		@ApiImplicitParam(name="exportFormat",required=true, value = "exportFormat", dataType = "string", paramType = "query"),
 		@ApiImplicitParam(name="preview",required=true, value = "preview", dataType = "string", paramType = "query"),
 		@ApiImplicitParam(name="reportName",required=true, value = "reportName", dataType = "string", paramType = "query"),
-		@ApiImplicitParam(name="mpId",required=true, value = "mpId", dataType = "string", paramType = "query"),
 		@ApiImplicitParam(name="startTime",required=true, value = "startTime", dataType = "string", paramType = "query"),
 		@ApiImplicitParam(name="endTime",required=true, value = "endTime", dataType = "string", paramType = "query"),
 	})
@@ -65,7 +61,6 @@ public class ReportController {
 			@RequestParam(value = "exportFormat", required = true) String exportFormat,
 			@RequestParam(value = "preview", required = true) String preview,
 			@RequestParam(value = "reportName", required = true) String reportName,
-			@RequestParam(value = "mpId", required = true) String mpId, 
 			@RequestParam(value = "startTime", required = true) String startTime, 
 			@RequestParam(value = "endTime", required = true) String endTime,
 			HttpServletResponse response) throws ThinventBaseException, IOException {
@@ -73,7 +68,6 @@ public class ReportController {
 		params.put("exportFormat", exportFormat);
 		params.put("preview", preview);
 		params.put("reportName", reportName);
-		params.put("mpId", mpId);
 		params.put("startTime", startTime);
 		params.put("endTime", endTime);
 		params.put("flag", "monitoring");

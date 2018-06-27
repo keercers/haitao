@@ -49,11 +49,7 @@ public class ReportHandlerImpl implements IReportHandler {
 		
 		//创建任务来运行报告—使用任务执行和运行报告
 		IRunAndRenderTask task = engine.createRunAndRenderTask(design);
-		MonitorPointVO vo = new MonitorPointVO();
-		vo = reportDao.getMpLocationByMpId(params.get("mpId"));
 		Map<String, String> paramMap = new HashMap<>();
-		paramMap.put("mpId", params.get("mpId"));
-		paramMap.put("mpLocation", vo.getMpLocation());
 		paramMap.put("startTime", params.get("startTime"));
 		paramMap.put("endTime", params.get("endTime"));
 		task.setParameterValues(paramMap);
@@ -101,11 +97,7 @@ public class ReportHandlerImpl implements IReportHandler {
 		
 		//创建任务来运行报告—使用任务执行和运行报告
 		IRunAndRenderTask task = engine.createRunAndRenderTask(design);
-		MonitorPointVO vo = new MonitorPointVO();
-		vo = reportDao.getMpLocationByMpId(params.get("mpId"));
 		Map<String, String> paramMap = new HashMap<>();
-		paramMap.put("mpId", params.get("mpId"));
-		paramMap.put("mpLocation", vo.getMpLocation());
 		paramMap.put("startTime", params.get("startTime"));
 		paramMap.put("endTime", params.get("endTime"));
 		task.setParameterValues(paramMap);
@@ -156,7 +148,6 @@ public class ReportHandlerImpl implements IReportHandler {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		returnMap.put("mpLocation", vo.getMpLocation());
 		return returnMap;
 	}
 }

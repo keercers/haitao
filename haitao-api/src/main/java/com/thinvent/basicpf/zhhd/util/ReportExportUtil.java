@@ -35,7 +35,7 @@ public class ReportExportUtil {
 		String cnName = getCnName(params);
 		Object flag = params.get("flag");
 		if ("monitoring".equals(flag)){
-			filename = cnName + "(" + map.get("mpLocation") + "：" + params.get("startTime") + "-" 
+			filename = cnName + "(" + params.get("startTime") + "-" 
 					+ params.get("endTime") + ")" + reportType;
 		} else if ("operation".equals(flag)){
 			filename = cnName + "(" + params.get("startTime") + "-" 
@@ -79,25 +79,7 @@ public class ReportExportUtil {
 		String cnName = null;
 		String reportName = params.get("reportName").toString();
 		Map<String, String> map = new HashMap<>();
-		map.put("TrafficFlowMaxAvgByMonRp", "船舶交通量统计分析");
-		map.put("TrafficFlowStatByDayRp", "船舶交通量汇总按天统计");
-		map.put("TrafficFlowStatByMonRp", "船舶交通量汇总按月统计");
-		map.put("TrafficFlowEOOStatByDayRp", "船舶交通量空重载汇总按天统计");
-		map.put("TrafficFlowSumAvgByMonRp", "船舶交通量观测统计月报表");
-		map.put("TrafficFlowOverLenStatByDayRp", "船舶超长统计报表");
-		map.put("OprInsTimes", "巡检记录统计");
-		map.put("OprInsRecPlan", "巡检计划记录统计");
-		map.put("OprInsEqu", "巡检情况统计");
-		map.put("OprAssetsType", "资产类型统计");
-		map.put("OprAssetsStatus", "资产状态统计");
-		map.put("OprAssetsAddress", "资产地点统计");
-		map.put("OprAssetsBc", "厂商品牌统计");
-		map.put("OprMafType", "故障类型统计");
-		map.put("OprMafStatus", "故障状态统计");
-		map.put("OprMafResolve", "故障处理结果统计");
-		map.put("OprMafAtr", "设备故障情况统计");
-		map.put("AlarmStatisticsAlarm", "报警事件处置统计");
-		map.put("AlarmStatisticsShip", "违章船舶统计");
+		map.put("TrafficFlowMaxAvgByMonRp", "单位统计分析");
 		for (Entry<String, String> entry : map.entrySet()) {
 			if (entry.getKey().equals(reportName)) {
 				cnName = entry.getValue();

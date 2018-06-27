@@ -29,19 +29,16 @@ public class ReportController {
 	@ApiOperation(value="报表管理", notes="报表管理")
 	@ApiImplicitParams({
 		@ApiImplicitParam(name="reportName",required=true, value = "reportName", dataType = "string", paramType = "query"),
-		@ApiImplicitParam(name="mpId",required=true, value = "mpId", dataType = "string", paramType = "query"),
 		@ApiImplicitParam(name="startTime",required=true, value = "startTime", dataType = "string", paramType = "query"),
 		@ApiImplicitParam(name="endTime",required=true, value = "endTime", dataType = "string", paramType = "query"),
 	})
 	@ResponseBody
 	public Map<String, String> getReportData(
 			@RequestParam(value = "reportName", required = true) String reportName,
-			@RequestParam(value = "mpId", required = true) String mpId, 
 			@RequestParam(value = "startTime", required = true) String startTime, 
 			@RequestParam(value = "endTime", required = true) String endTime) throws ThinventBaseException, EngineException {
 		Map<String, String> params = new HashMap<>();
 		params.put("reportName", reportName);
-		params.put("mpId", mpId);
 		params.put("startTime", startTime);
 		params.put("endTime", endTime);
 		return this.reportService.getReportData(params);
@@ -52,7 +49,6 @@ public class ReportController {
 	@ApiImplicitParams({
 		@ApiImplicitParam(name="exportFormat",required=true, value = "exportFormat", dataType = "string", paramType = "query"),
 		@ApiImplicitParam(name="reportName",required=true, value = "reportName", dataType = "string", paramType = "query"),
-		@ApiImplicitParam(name="mpId",required=true, value = "mpId", dataType = "string", paramType = "query"),
 		@ApiImplicitParam(name="startTime",required=true, value = "startTime", dataType = "string", paramType = "query"),
 		@ApiImplicitParam(name="endTime",required=true, value = "endTime", dataType = "string", paramType = "query"),
 	})
@@ -60,13 +56,11 @@ public class ReportController {
 	public Map<String, String> exportReportData(
 			@RequestParam(value = "exportFormat", required = true) String exportFormat,
 			@RequestParam(value = "reportName", required = true) String reportName,
-			@RequestParam(value = "mpId", required = true) String mpId, 
 			@RequestParam(value = "startTime", required = true) String startTime, 
 			@RequestParam(value = "endTime", required = true) String endTime) throws ThinventBaseException, EngineException {
 		Map<String, String> params = new HashMap<>();
 		params.put("exportFormat", exportFormat);
 		params.put("reportName", reportName);
-		params.put("mpId", mpId);
 		params.put("startTime", startTime);
 		params.put("endTime", endTime);
 		return this.reportService.exportReportData(params);
